@@ -6,9 +6,6 @@ if(isset($_POST['deconnect'])){
     session_unset();
     session_destroy();
     
-    echo '<script language="javascript">';
-                echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Le mot de passe ne correspond pas.");';
-                echo '</script>';
 
 }
 

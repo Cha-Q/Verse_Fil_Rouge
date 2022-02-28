@@ -1,4 +1,5 @@
 <?php
+    
 include('./controler/deconnexion.php');
     session_start();
 ?>
@@ -46,7 +47,10 @@ include('./controler/deconnexion.php');
 
 
             </ul>
-            <button class=" btn-navbar ">se déconnecter</button>
+            
+                <input value="deconnect" type="submit"  class=" btn-navbar ">se déconnecter</input>
+            
+            
         </div>
     </nav>
 

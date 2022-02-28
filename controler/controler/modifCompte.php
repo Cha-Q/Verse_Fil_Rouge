@@ -27,7 +27,7 @@ if (isset($_POST['newlogin']) && isset($_POST['mdp-newlogin'])) {
     if (!password_verify($mdp, $aaa['mdp_utilisateur'])) {
         
         echo '<script language="javascript">';
-        echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Le mot de passe ne correspond pas.");';
+        echo 'alert("Il semblerait que le mot de passe ne soit pas le bon");';
         echo '</script>';
     } else {
         if ($aaa == true) {
