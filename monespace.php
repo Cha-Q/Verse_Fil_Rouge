@@ -48,14 +48,14 @@ include('./controler/deconnexion.php');
 
             </ul>
             
-                <input value="deconnect" type="submit"  class=" btn-navbar ">se déconnecter</input>
-            
+                <input value="deconnect" type="submit"  class=" btn-navbar ">se déconnecter </input>
+
             
         </div>
     </nav>
 
     <div class="container" id="mainSpace">
-        <h2>Ceci est ta dashboard bienvenu chez toi !</h2>
+        <h2>Ceci est ta dashboard bienvenu chez toi ! <i class="fab fa-twitch" onclick="window.location.href = './index.php';" style="color:blue;"></i></h2>
     </div>
 
 

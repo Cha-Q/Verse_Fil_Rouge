@@ -29,7 +29,7 @@
         <div class="row h-100 align-items-center ">
 
 
-            <div class="col-6 lead side1">
+            <div class="col-lg-6 col-sm-12 lead side1">
                 <div>
                     <h1>Verse is coming for you !</h1>
                     <p>
@@ -42,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="col-5 offset-1 text-center" id="buttons">
+            <div class="col-lg-5 col-sm-12 col-lg-offset-1 text-center" id="buttons">
                 <nav class="button">
                     <p>On vous tend la main ;)</p>
 
