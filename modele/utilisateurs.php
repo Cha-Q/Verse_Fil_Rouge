@@ -146,7 +146,7 @@ Class User {
         $myQuery = 'UPDATE
                         '.$this->table.'
                     SET
-                        login_utilisateur = :login,
+                        login_utilisateur = :login
                     WHERE
                         id_utilisateur = :id_user';
 

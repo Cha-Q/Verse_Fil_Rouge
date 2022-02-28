@@ -15,8 +15,12 @@ if (isset($_SESSION['login'])) {
     $myuser = $user->getSingleUser();
     $aaa = $myuser->fetch();
 
+    $user->setId_user($aaa['id_utilisateur']);
+    $user->setLogin_user($aaa['login_utilisateur']);
+    $user->setMail_user($aaa['mail_utilisateur']);
     
-    var_dump($myuser);
+    $user->setMdp_user($aaa['mdp_utilisateur']);
+
 
 if (isset($_POST['newlogin']) && isset($_POST['mdp-newlogin'])) {
 
@@ -31,14 +35,15 @@ if (isset($_POST['newlogin']) && isset($_POST['mdp-newlogin'])) {
         echo '</script>';
     } else {
         if ($aaa == true) {
-            var_dump($aaa['id_utilisateur']);
-            $user->getId_user();
-            var_dump($user);
+            $user->setId_user(intval($aaa['id_utilisateur'],10));
+            
             $user->setLogin_user($newlogin);
             
             $user->updateUser();
             
-        $_SESSION['login'] = $log;
+            $_SESSION['login'] = $newlogin;
+            header ('location: monespace.php');
+        
         }else{
             echo 'une erreur est survenue';
         }

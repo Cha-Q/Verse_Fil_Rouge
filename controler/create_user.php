@@ -75,6 +75,7 @@
                         } else{
                             echo "c'est bon ton compte est créé le sang !";
                             session_start();
+                            
                             $_SESSION['login'] = $login;
                             $_SESSION['mail'] = $mail_user;
                             $_SESSION['age'] = $age_user;

@@ -1,307 +1,266 @@
-/* ---^---^--------------------------------------------------------------------*/
+/* template principal copié sur chaque pages */
 
-
-/* ---*---*------------Font utilisés sur le site -----------------------------*/
-
-
-/* -----()----- ----------------------------------------- -------------------*/
-
-@font-face {
-    font-family: "coolvetica rg";
-    src: url(/view/Polices/coolvetica\ rg.ttf) format("truetype");
+body {
+    height: 100vh;
+    background: rgb(119, 68, 196);
+    background: -moz-radial-gradient(circle, rgba(119, 68, 196, 1) 0%, rgba(45, 9, 100, 0.9472163865546218) 100%);
+    background: -webkit-radial-gradient(circle, rgba(119, 68, 196, 1) 0%, rgba(45, 9, 100, 0.9472163865546218) 100%);
+    background: radial-gradient(circle, rgba(119, 68, 196, 1) 0%, rgba(45, 9, 100, 0.9472163865546218) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#7744c4", endColorstr="#2d0964", GradientType=1);
 }
 
-
-/* ---^---^--------------------------------------------------------------------*/
-
-
-/* ---*---*------------Mise en forme de la page1 -----------------------------*/
-
-
-/* -----()----- ----------------------------------------- -------------------*/
-
-html {
+* {
+    color: aliceblue;
     margin: 0;
     padding: 0;
-    width: auto;
-    height: auto;
-    background: radial-gradient(at 50% 25%, #a970ff, #2d0964) fixed;
-    color: seashell;
-    font-family: "coolvetica rg", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-/* ---^---^--------------------------------------------------------------------*/
-
-
-/* ---*---*------------Index top right entreprise-----------------------------*/
-
-
-/* -----()----- ----------------------------------------- -------------------*/
-
-header p:nth-child(1) {
-    text-align: end;
-    width: auto;
-    font-size: 0.8em;
-    height: 30px;
+#accueil {
+    height: 100%;
 }
 
-p i {
-    margin-left: 5px;
-}
-
-
-/* ---^---^--------------------------------------------------------------------*/
-
-
-/* ---*---*------------Cadre de la page---------------------------------------*/
-
-
-/* -----()----- ----------------------------------------- -------------------*/
-
-.cadre {
-    margin: auto;
-    height: 865px;
-    border: rgba(255, 255, 255, 0.548) 1px solid;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.158);
-}
-
-.cadre:hover {
-    background-color: rgba(255, 255, 255, 0.281);
-    box-shadow: seashell 0 0 1em;
-}
-
-
-/* ---^---^--------------------------------------------------------------------*/
-
-
-/* ---*---*------------Corps à l'intérieur du cadre---------------------------*/
-
-
-/* -----()----- ----------------------------------------- -------------------*/
-
-#bodyIndex {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 80%;
-}
-
-h1 {
-    text-align: center;
-    font-size: 4em;
-    align-self: flex-start;
-    margin-left: 50px;
-}
-
-#bodyIndex p {
-    font-size: 1.4em;
-}
-
-
-/* Mise en forme du bouton/link */
-
-.button {
-    text-decoration: none;
-    display: flex;
-    font-size: 1.3em;
-    padding: 0;
-    border-radius: 25px;
-    align-self: flex-end;
-    margin-top: 200px;
-    justify-content: space-evenly;
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
 }
 
 a {
     text-decoration: none;
-    color: seashell;
-}
-
-nav p {
-    margin: 5px;
-}
-
-.button #join a {
-    display: block;
-    border-radius: 25px;
-    border: 1px solid #a970ff;
-    background-color: #a970ff;
-    padding: 10px 35px 10px 25px;
-}
-
-.button #connect a {
-    color: #a970ff;
-    display: block;
-    border-radius: 25px;
-    border: 1px solid seashell;
-    background-color: seashell;
-    padding: 10px 35px 10px 25px;
-}
-
-.button #join a:hover {
-    color: #a970ff;
-    background-color: seashell;
-    border: 1px solid rgba(169, 112, 255, 0.4);
-    box-shadow: #a970ff inset 0 0 1em, seashell 0 0 1em;
-}
-
-.button #connect a:hover {
-    color: rgb(255, 245, 238);
-    background-color: #a970ff;
-    border: 1px solid rgba(255, 245, 238, 0.4);
-    box-shadow: seashell inset 0 0 1em, seashell 0 0 1em;
-}
-
-a i {
-    position: absolute;
-    margin-left: 5px;
+    color: aliceblue;
+    margin-right: 5px;
 }
 
 
-/* -------------------------------------------------^---^-----------------*/
+/* fin du template principal */
 
-
-/* ---------Début de la seconde page----------------*---*----------------*/
-
-
-/* --------------------------------------------------()-----------------*/
-
-#askYou {
-    margin: auto;
-    width: 60%;
-    height: 700px;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-evenly;
+p {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 2vh;
 }
 
-#askYou p {
-    word-wrap: break-word;
-    margin: 0;
+nav {
+    margin-top: 30px;
 }
 
-#askYou p:nth-child(1) {
-    animation: pop1 2s ease;
-}
-
-#askYou p:nth-child(2) {
-    animation: pop2 6s ease;
-}
-
-#askYou p:nth-child(3) {
-    animation: pop2 9s ease;
-}
-
-#askYou p:nth-child(4) {
-    animation: pop2 16s ease;
-}
-
-#askYou p:nth-child(2n+2) {
-    align-self: flex-end;
-}
-
-#askYou p:nth-child(4) a {
-    display: block;
-    text-align: center;
-    border-radius: 25px;
-    border: 1px solid #a970ff;
-    padding: 5px 10px;
-    background-color: #a970ff;
-    margin-left: 5px;
-    margin-top: 10px;
-}
-
-#askYou p:nth-child(4) a:hover {
-    color: #a970ff;
-    border: 1px solid rgba(169, 112, 255, 0.4);
-    background-color: #fff5ee;
-    box-shadow: #a970ff inset 0 0 1em, #fff5ee 0 0 0.5em;
-    border-radius: 25px;
-    padding: 5px 10px;
-    margin-left: 5px;
+.side1 {
+    font-size: 3vh;
 }
 
 
-/* Animations des paragraphes qui pop */
+/* modification sur les boutons */
 
-@keyframes pop1 {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.btn-primary {
+    border-radius: 30px;
+    padding: 1% 2%;
+    min-width: 100px;
+    background-color: aliceblue;
+    color: rgb(119, 68, 196);
+    font-weight: bold;
+    border: rgb(119, 68, 196) solid;
 }
 
-@keyframes pop2 {
-    from {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.btn-primary:hover {
+    background-color: rgb(119, 68, 196);
+    border: solid rgb(119, 68, 196);
+    animation: inButton ease-in 2 0.2s;
+}
+
+#buttons {
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+#buttons p {
+    color: rgb(119, 68, 196);
+    font-size: 2vw;
+}
+
+#connect {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px
 }
 
 
-/* -----------------------------------------------------()-----------------*/
+/* fin modification sur les boutons */
 
 
-/* ---------Début de la Troisième page----------------*---*---------------*/
+/* modification sur le formulaire d'inscription */
 
-
-/* ---------------------------------------------------^---^--------------*/
-
-.cadre2 {
-    margin: auto;
-    width: 60%;
-    height: 100%;
-    border: rgba(255, 255, 255, 0.548) 1px solid;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.158);
-}
-
-.cadre2:hover {
-    background-color: rgba(255, 255, 255, 0.281);
-    box-shadow: seashell 0 0 1em;
-}
-
-h2 {
-    margin: 20px auto 10px auto;
-    width: 40%;
-    word-wrap: break-word;
-    text-align: center;
-    font-weight: lighter;
+.container {
+    width: 70%;
 }
 
 form {
-    width: 80%;
-    margin: auto;
+    width: 100%;
 }
 
-form div {
-    margin: 0 auto 10px auto;
+.form-group {
+    padding: 0 20px 0 20px;
 }
 
-.nomPrenom {
+input[type="radio"] {
+    margin-top: 20px;
+}
+
+#inscription {
+    margin-top: 40px;
+    padding-top: 10px;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+#radioMF {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-fieldset {
-    border: none;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 80%;
+label {
+    color: rgb(119, 68, 196);
+    font-weight: bold;
 }
 
-input {
-    font-family: "coolvetica rg", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#age {
+    width: 10%;
+    min-width: 100px;
 }
 
-input:focus {
-    color: #a970ff;
+.submit {
+    width: 100%;
+    margin-bottom: 80px;
 }
+
+button[type="submit"] {
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(119, 68, 196);
+    font-weight: bold;
+}
+
+
+/* fin des modifications sur le formulaire d'inscription */
+
+
+/* début des modifications de monespace */
+
+.navbar {
+    padding: 0;
+    /* Suppression du padding auto de l'attr navbar */
+}
+
+nav {
+    margin-top: 40px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    color: rgb(119, 68, 196);
+}
+
+#mainSpace {
+    background-color: aliceblue;
+    min-height: 800px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.navbar-brand {
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.navbar-brand,
+.nav-link {
+    text-decoration: none;
+    color: rgb(119, 68, 196);
+    font-weight: bold;
+}
+
+.btn-navbar {
+    position: absolute;
+    right: 10px;
+    padding: 15px;
+    color: rgb(119, 68, 196);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.nav-link {
+    border-left: 1px solid black;
+    padding: 20px;
+    margin-right: 0px;
+}
+
+.nav-link:hover {
+    background-color: rgb(119, 68, 196);
+    color: aliceblue;
+}
+
+
+/* fin des modifications de mon espace */
+
+
+/* début modification infoCompte */
+
+.modifCompte {
+    width: 60%;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-color: aliceblue;
+}
+
+.i {
+    margin-top: 10px;
+}
+
+
+/* fin modification infoCompte */
+
+
+/* Les animations (c'est pas encore les studios Pixar */
+
+@keyframes inButton {
+    from {
+        background-color: aliceblue;
+    }
+    to {
+        background-color: rgb(119, 68, 196);
+    }
+}
+
+
+/* fin des animations */
+
+
+/* responsive inscription début */
+
+@media screen and (max-width: 1200px) {
+    #radioMF {
+        flex-direction: column;
+    }
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+
+/* responsive inscription fin */
