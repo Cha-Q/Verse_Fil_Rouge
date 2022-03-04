@@ -48,23 +48,32 @@
 
             </ul>
                 <form method="POST">
-                    <input value="deconnect" name="deconnect" type="submit"   >se déconnecter </input>
-                </form>
+                    <input value="deconnect" class="btn btn-navbar" name="deconnect" type="submit"   >se déconnecter </input>
+                    </form>
         </div>
         
     </nav>
 
     <div class="container" id="mainSpace">
         <h2>Ceci est ta dashboard bienvenu chez toi ! <i class="fab fa-twitch" onclick="window.location.href = './index.php';" style="color:blue;"></i></h2>
+
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">https://www.twitch.tv/</span>
+        </div>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+    <script src= "http://player.twitch.tv/js/embed/v1.js" ></script>
+    <div id="PLAYER_DIV_ID" class="text-center" SameSite=None; Secure></div>
+
+    <script type="text/javascript" src="./player.js">
+
+    </script>
     </div>
 
 
-
-    <?Php if(isset($_SESSION['login'])){
-        echo "<p>Connecté comme ".$_SESSION['login']."</p>";
-    }
-    ?>
-
+    
+    
 </body>
 
 </html>

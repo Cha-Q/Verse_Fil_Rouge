@@ -7,7 +7,7 @@ include_once('./modele/utilisateurs.php');
 $utilisateur = new User();
 
 $msg = '<h1> Bonjour</h1>';
-    if(isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['mdp']) && !empty($_POST['mdp'])){
+    if(!empty($_POST['login']) && !empty($_POST['mdp'])){
         $login = valid_donnees($_POST['login']);
         $mdp = valid_donnees($_POST['mdp']);
         try{
@@ -21,6 +21,7 @@ $msg = '<h1> Bonjour</h1>';
         
         $result = $req->fetch();
         var_dump($result);
+        var_dump($mdp);
         if($result == true){
             
             if(password_verify($mdp, $result['mdp_utilisateur']) == true){
@@ -39,7 +40,7 @@ $msg = '<h1> Bonjour</h1>';
                         $msg = '<h3>une erreur est survenue</h3>';
                     }
             } else{
-                $msg = "<h3>Le mot de passe est incorrect</h3>";
+                $msg = "<h3 style='color:black;'>Le mot de passe est incorrect</h3>";
             }
         } else{
             $msg= "<h3>Identifiant incorrect</h3>";

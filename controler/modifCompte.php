@@ -34,7 +34,7 @@ if (isset($_SESSION['login'])) {
                 echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Le mot de passe ne correspond pas.");';
                 echo '</script>';
             } else {
-                
+
                 if ($aaa == true) {
                     $user->setId_user(intval($aaa['id_utilisateur'],10));
                     
@@ -55,7 +55,7 @@ if (isset($_SESSION['login'])) {
     // modification du mot de passe
     if (isset($_POST['newmdp']) && !empty($_POST['newmdp']) && isset($_POST['mdp-newmdp']) && !empty($_POST['mdp-newmdp'])){
 
-        $newMdp = valid_donnees($_POST['newMdp']);
+        $newMdp = valid_donnees($_POST['newmdp']);
         $prevMdp= valid_donnees($_POST['mdp-newmdp']);
     
         if (!password_verify($prevMdp, $aaa['mdp_utilisateur'])) {
@@ -66,7 +66,7 @@ if (isset($_SESSION['login'])) {
         } else {
             if ($aaa == true) {
 
-                $newMdp = password_hash($newMdp,PASSWORD_BCRYPT);
+                $newMdp = password_hash($newMdp, PASSWORD_BCRYPT);
 
                 $user->setId_user(intval($aaa['id_utilisateur'],10));
                 $_SESSION['login'] = $aaa['login_utilisateur'];
@@ -74,11 +74,15 @@ if (isset($_SESSION['login'])) {
                 
                 $user->updateUser();
                 
-                
+                echo '<script language="javascript">';
+                echo 'alert("c est bon.");';
+                echo '</script>';
                 header ('location: monespace.php');
             
             }else{
-                echo 'une erreur est survenue';
+                echo '<script language="javascript">';
+                echo 'alert("c est pas bon.");';
+                echo '</script>';
             }
         }
     }
