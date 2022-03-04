@@ -1,7 +1,7 @@
 <?php
-    
-include('./controler/deconnexion.php');
     session_start();
+    include('./controler/deconnexion.php');
+    
 ?>
 
 <!DOCTYPE html>
@@ -17,18 +17,19 @@ include('./controler/deconnexion.php');
 </head>
 <body>
     <header>
-
-	
         <p> Powered by <a href="www.twitch.com">Twitch</a><i class="fab fa-twitch"></i></p>
-	
     </header>
+
 	<h2 >Bienvenue sur ton Verse <?= $_SESSION['login']; ?></h2>
+
     <nav class="navbar navbar-expand-lg bg-light">
 
         <a class="navbar-brand" href="./index.html">Verse</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
             <span class="navbar-toggler-icon"></span>
+
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -45,13 +46,12 @@ include('./controler/deconnexion.php');
                     <a class="nav-link" href="#">Mes amis</a>
                 </li>
 
-
             </ul>
-            
-                <input value="deconnect" type="submit"  class=" btn-navbar ">se déconnecter </input>
-
-            
+                <form method="POST">
+                    <input value="deconnect" name="deconnect" type="submit"   >se déconnecter </input>
+                </form>
         </div>
+        
     </nav>
 
     <div class="container" id="mainSpace">

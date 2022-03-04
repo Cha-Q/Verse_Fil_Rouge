@@ -4,6 +4,8 @@
     include_once('./utils/utils.php');
 
     
+    
+    // récupération des informations entrée par l'utilisateur
     if (isset($_POST['radioS']) 
         && isset($_POST['prenom']) 
         && isset($_POST['nom']) 
@@ -23,6 +25,8 @@
         $id_genre = intval($_POST['radioS'],10);
         $login = valid_donnees($_POST['login']);
         
+
+        // Une fois les informations entrée on engage nos tests avant de préparer l'insertion
         if($mdp_user == $mdp2){
 
             $name_user = valid_donnees($_POST['nom']);
@@ -65,6 +69,8 @@
                     echo "Ce mail est déjà utilisé, veuillez verifier que vous n'ayez pas déjà un compte";
 
                 } else{
+                    
+                    //Une fois nos vérifications effectuées on finalise l'insertion 
                     if($user->createUser()){
                         $return = $user->getSingleUser();
                         $nbrUser = $return->rowCount();
@@ -75,6 +81,7 @@
                         } else{
                             echo "c'est bon ton compte est créé le sang !";
                             session_start();
+                            
                             
                             $_SESSION['login'] = $login;
                             $_SESSION['mail'] = $mail_user;
@@ -87,7 +94,7 @@
                 }
                     
             }else{
-            echo "Les informations que vous avez entrée ne sont pas valides";
+            echo "Les informations que vous avez entré ne sont pas valides";
         }
         }else{
             echo "Les adresses mail que vous avez entré ne correspondent pas";

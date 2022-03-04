@@ -17,7 +17,7 @@
     <title>Verse - enjoy the game!</title>
 </head>
 
-<body>
+<body id="app">
 
     <header>
         <p> Powered by <a href="https://www.twitch.com" target="_blank">Twitch</a><i class="fab fa-twitch"></i></p>
@@ -33,7 +33,8 @@
                 <div>
                     <h1>Verse is coming for you !</h1>
                     <p>
-                        Welcome to <strong>Verse</strong>
+                        Welcome to 
+                        <strong>Verse</strong>
                         <br> rejoingez nous sans plus attendre dans cette expérience,
                         <br> partagez et divertissez-vous avec vos amis.
 
@@ -42,9 +43,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-5 col-sm-12 col-lg-offset-1 text-center" id="buttons">
+            <div class="col-lg-5 col-sm-12 col-lg-offset-1 no-gutters text-center" id="buttons">
                 <nav class="button">
-                    <p>On vous tend la main ;)</p>
+                    <p style="margin-bottom:10px;">Lance-toi ;)</p>
 
                     <div id="join">
                         <button class="btn btn-primary" onclick="window.location.href = './inscription.php';">Rejoins-nous !</button>

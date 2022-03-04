@@ -2,6 +2,10 @@
 
 include('./connect/connect.php');
 
+
+
+
+// La classe utilisateur et son constructeur
 Class User {
 
 
@@ -114,6 +118,8 @@ Class User {
         $stmt->execute();
         return $stmt;
     }
+
+    // Requête de création d'utilisateur
     public function createUser(){
         $myQuery = 'INSERT INTO
                         '.$this->table.'
@@ -142,6 +148,7 @@ Class User {
         return $stmt->execute();
     }
 
+    // Update du login de l'utilisateur
     public function updateUser(){
         $myQuery = 'UPDATE
                         '.$this->table.'
@@ -157,12 +164,7 @@ Class User {
         $stmt->bindParam(':login', $this->login_user);
         $stmt->bindParam(':id_user', $this->id_user);
         return $stmt->execute();
-        // if() {
-        //     // je retourne true si mise à jour réussie
-        //     return true;
-        // } else {
-        //     return false;
-        // }
+        
     }
     public function verifyLogin() {
         $myQuery = 'SELECT

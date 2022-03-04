@@ -26,6 +26,8 @@ include_once('./controler/modifCompte.php');
 
         <form action="" method="post">
 
+            <h2>Modifiez vos informations</h2>
+            
             <div class="form-group form-check ">
             
                 <label class="form-input-label" for="newlogin">Nouveau pseudo : </label>
@@ -49,6 +51,7 @@ include_once('./controler/modifCompte.php');
                 <button class="btn btn-primary col-2 i" type="submit" name="Newmdp">Confirmer</button>
             </div>
         </form>
+
     </div>
 </body>
 </html>

@@ -15,6 +15,10 @@ body {
     padding: 0;
 }
 
+#app * {
+    font-size: 3vh;
+}
+
 #accueil {
     height: 100%;
 }
@@ -40,16 +44,13 @@ a {
 p {
     margin: 0px;
     font-weight: bold;
-    font-size: 2vw;
 }
 
 nav {
     margin-top: 30px;
 }
 
-.side1 {
-    font-size: 3vh;
-}
+.side1 {}
 
 
 /* modification sur les boutons */
@@ -77,7 +78,6 @@ nav {
 
 #buttons p {
     color: rgb(119, 68, 196);
-    font-size: 2vw;
 }
 
 #connect {

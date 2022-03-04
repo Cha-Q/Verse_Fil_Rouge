@@ -1,12 +1,14 @@
 <?php
-
+var_dump($_SESSION);
 
 if(isset($_POST['deconnect'])){
-    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
-    session_unset();
+    var_dump($_SESSION);
+    $_SESSION['utilisateur']='';
+    session_start();
     session_destroy();
+    header('Location: ./index.php');
+    exit();
     
-
 }
 
 ?>

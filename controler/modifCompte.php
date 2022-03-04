@@ -2,7 +2,7 @@
 include_once('./modele/utilisateurs.php');
 include_once('./utils/utils.php');
 
-
+// modification du login de l'utilisateur
 $user = new User();
 
 if (isset($_SESSION['login'])) {

@@ -7,7 +7,7 @@ include_once('./modele/utilisateurs.php');
 $utilisateur = new User();
 
     
-    if(isset($_POST['login']) && $_POST['mdp']){
+    if(isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['mdp']) && !empty($_POST['mdp'])){
         $login = valid_donnees($_POST['login']);
         $mdp = valid_donnees($_POST['mdp']);
         try{
@@ -27,9 +27,10 @@ $utilisateur = new User();
                 session_start();
                 $_SESSION['id'] = $result['id_utilisateur'];
                 $_SESSION['login'] = $result['login_utilisateur'];
+                $_SESSION['mail'] = $result['mail_utilisateur'];
                     if(isset($_SESSION['id']) && isset($_SESSION['login'] )){
                         $value = $_SESSION['id'];
-                        setcookie("TestCookie", $value);
+                        
                         header ('location: monespace.php');
                     }else{
                         echo 'une erreur est survenue';
