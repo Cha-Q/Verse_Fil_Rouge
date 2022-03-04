@@ -38,9 +38,11 @@ include_once('./controler/modifCompte.php');
                 <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
             
                 <button class="btn btn-primary col-2 i" type="submit" name="Newlogin">Confirmer</button>
-                </div>
-
-                <div class="form-group form-check ">
+            </div>
+            
+        </form>
+        <form action="" method="post">
+            <div class="form-group form-check ">
                 <label class="form-input-label" for="newmdp">Nouveau mot de passe : </label>
                 <input class="form-control" type="password" name="newmdp" maxlength="50" />
             

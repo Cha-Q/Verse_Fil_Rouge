@@ -32,9 +32,11 @@ include('./controler/connexion_user.php');
     </header>
 
 	<div class="container " id="inscription">
-
+<?= $msg ?>
     <h1 class="text-center" style="color:black;">Veuillez entrer vos informations pour rejoindre votre espace</h1>
+
     <div class="form-group">
+        
         <form action="" method="post">
             <div>
                 <label class="form-input-label">Veuillez saisir votre Login ou votre adresse mail</label>
@@ -44,9 +46,11 @@ include('./controler/connexion_user.php');
                 <label class="form-input-label">Veuillez saisir votre mot de passe</label>
                 <input class="form-control" type="password" name="mdp" id="password" placeholder="mot de passe">
             </div>
+            
             <button class="btn btn-primary col-2 " type="submit" name="submit">Valider</button>
-            <button class="btn btn-primary col-2" onclick="window.location.href = './index.php';" type="submit" name="submit">retour</button>
+            
         </form>
+        <button class="btn btn-primary col-2" onclick="window.location.href = './index.php'" >retour</button>
 	</div>
     </div>
 </body>

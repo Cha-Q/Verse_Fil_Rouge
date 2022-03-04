@@ -3,8 +3,6 @@
 include('./connect/connect.php');
 
 
-
-
 // La classe utilisateur et son constructeur
 Class User {
 
@@ -153,7 +151,8 @@ Class User {
         $myQuery = 'UPDATE
                         '.$this->table.'
                     SET
-                        login_utilisateur = :login
+                        login_utilisateur = :login,
+                        mdp_utilisateur = :mdp
                     WHERE
                         id_utilisateur = :id_user';
 
@@ -162,6 +161,7 @@ Class User {
         // bind des paramètres
 
         $stmt->bindParam(':login', $this->login_user);
+        $stmt->bindParam(':mdp', $this->mdp_user);
         $stmt->bindParam(':id_user', $this->id_user);
         return $stmt->execute();
         
