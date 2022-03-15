@@ -64,7 +64,10 @@
         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
         </div>
     <script src= "http://player.twitch.tv/js/embed/v1.js" ></script>
-    <div id="PLAYER_DIV_ID" class="text-center" SameSite=None; Secure></div>
+    <div id="PLAYER_DIV_ID" class="text-center" >
+        <span id="player"></span>
+    </div>
+    
 
     <script type="text/javascript" src="./player.js">
 
