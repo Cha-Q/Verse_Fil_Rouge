@@ -1,13 +1,16 @@
 <?php
 
-include('./controler/create_user.php');
+include_once('./controler/create_user.php');
 include_once('./modele/utilisateurs.php');
 
 
-$utilisateur = new User();
 
-$msg = '<h1> Bonjour</h1>';
-    if(!empty($_POST['login']) && !empty($_POST['mdp'])){
+
+$msg = '<h1 style="color:blue;"> huhu </h1>';
+
+    
+    if(isset($_POST['login']) && isset($_POST['mdp']) ){
+        $utilisateur = new User();
         $login = valid_donnees($_POST['login']);
         $mdp = valid_donnees($_POST['mdp']);
         try{
@@ -21,7 +24,7 @@ $msg = '<h1> Bonjour</h1>';
         
         $result = $req->fetch();
         var_dump($result);
-        var_dump($mdp);
+        
         if($result == true){
             
             if(password_verify($mdp, $result['mdp_utilisateur']) == true){
@@ -33,7 +36,7 @@ $msg = '<h1> Bonjour</h1>';
 
                     if(isset($_SESSION['id']) && isset($_SESSION['login'] )){
                         $value = $_SESSION['id'];
-                        
+                        var_dump($_SESSION['id']);
                         header ('location: monespace.php');
                         $msg = " <h3> let's go !!!!!!!!!</h3>";
                     }else{
@@ -46,9 +49,6 @@ $msg = '<h1> Bonjour</h1>';
             $msg= "<h3>Identifiant incorrect</h3>";
         }
     }
-
-
-
 
 
 ?>

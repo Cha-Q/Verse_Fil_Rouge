@@ -54,6 +54,19 @@ include_once('./controler/modifCompte.php');
             </div>
         </form>
 
+        <h2>Supprimez définitivement votre compte</h2>
+        <form action="" method="post">
+            <div class="form-group form-check ">
+                    <label class="form-input-label" for="mdpSuppr">Entrez votre mot de passe </label>
+                    <input class="form-control" type="password" name="mdpSuppr" maxlength="50" />
+            
+                    <label class="form-input-label" for="mpdConf">Confirmez votre mot de passe : </label>
+                    <input class="form-control" type="password" name="mpdConf"  maxlength="15" />
+                    
+                    <button class="btn btn-primary col-2 i" type="submit" name="delete">Confirmer</button>
+            </div>
+        </form>
+
     </div>
 </body>
 </html>

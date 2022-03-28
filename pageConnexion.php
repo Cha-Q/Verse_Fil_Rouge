@@ -1,10 +1,10 @@
 <?php 
-include('./controler/connexion_user.php');
+    include('./controler/connexion_user.php');
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,28 +30,35 @@ include('./controler/connexion_user.php');
             </ul>
         </nav> -->
     </header>
+    <?= $msg?>
+	<div class="container " id="connection">
 
-	<div class="container " id="inscription">
-<?= $msg ?>
     <h1 class="text-center" style="color:black;">Veuillez entrer vos informations pour rejoindre votre espace</h1>
 
-    <div class="form-group">
-        
-        <form action="" method="post">
-            <div>
-                <label class="form-input-label">Veuillez saisir votre Login ou votre adresse mail</label>
-                <input class="form-control" type="text" name="login" id="login" placeholder="votre identifiant">
-            </div>
-            <div>
-                <label class="form-input-label">Veuillez saisir votre mot de passe</label>
-                <input class="form-control" type="password" name="mdp" id="password" placeholder="mot de passe">
-            </div>
+        <div class="form-group">
             
-            <button class="btn btn-primary col-2 " type="submit" name="submit">Valider</button>
+            <form action="" method="post">
+                <div>
+                    <label class="form-input-label">Veuillez saisir votre Login ou votre adresse mail</label>
+                    <input class="form-control" type="text" name="login" id="login" placeholder="votre identifiant" required>
+                </div>
+                <div>
+                    <label class="form-input-label">Veuillez saisir votre mot de passe</label>
+                    <input class="form-control" type="password" name="mdp" id="password" placeholder="mot de passe" required>
+                </div>
+                
+                <div class="text-center">
+
+                    <button class="log btn btn-primary col-3 " type="submit" name="submit" >Valider</button>
+                    
+                    <a class="log btn btn-primary col-3" href="./index.php"  type="submit" name="submit">Retour</a>
+                    
+                </div>
+                
+                
+            </form>
             
-        </form>
-        <button class="btn btn-primary col-2" onclick="window.location.href = './index.php'" >retour</button>
-	</div>
+        </div>
     </div>
 </body>
 

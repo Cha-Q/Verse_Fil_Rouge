@@ -158,12 +158,13 @@
 
 
 
-        <div class="submit text-center">
+                <div class="submit text-center">
 
-            <button class="btn btn-primary col-2 " type="submit" name="submit">Valider</button>
-            <button class="btn btn-primary col-2" onclick="window.location.href = './index.php';" type="submit" name="submit">retour</button>
+                    <button class="btn btn-primary col-2 " type="submit" name="submit">Valider</button>
 
-        </div>
+                    <a class="log btn btn-primary col-2" href="./index.php"  type="submit" name="submit">Retour</a>
+
+                </div>
 
 
 

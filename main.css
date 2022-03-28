@@ -58,7 +58,7 @@ nav {
 .btn-primary {
     border-radius: 30px;
     padding: 1% 2%;
-    min-width: 60px;
+    min-width: 100px;
     background-color: aliceblue;
     color: rgb(119, 68, 196);
     font-weight: bold;
@@ -115,6 +115,7 @@ input[type="radio"] {
     padding-top: 10px;
     background-color: aliceblue;
     border-radius: 30px;
+    padding: 30px 20px;
 }
 
 #radioMF {
@@ -140,10 +141,6 @@ label {
     margin-bottom: 80px;
 }
 
-button[type="submit"] {
-    margin-bottom: 20px;
-}
-
 h2 {
     text-align: center;
     color: rgb(119, 68, 196);
@@ -152,6 +149,23 @@ h2 {
 
 
 /* fin des modifications sur le formulaire d'inscription */
+
+
+/* Début des modifications sur le fomulaire de connection */
+
+#connection {
+    margin-top: 40px;
+    padding: 30px 20px;
+    background-color: aliceblue;
+    border-radius: 30px 20px 20px 20px;
+}
+
+.log {
+    margin: 10px;
+}
+
+
+/* fin des modifications sur le fomulaire de connection */
 
 
 /* début des modifications de monespace */

@@ -86,6 +86,48 @@ if (isset($_SESSION['login'])) {
             }
         }
     }
+
+    if(isset($_POST['mdpSuppr']) && isset($_POST['mpdConf'])){
+        
+        
+        $mdp1 = valid_donnees($_POST['mdpSuppr']);
+        $mdp2 = valid_donnees($_POST['mpdConf']);
+
+        $utilisateur = $_SESSION['login'];
+
+            if(!password_verify($mdp1, $aaa['mdp_utilisateur']) && !password_verify($mdp2, $aaa['mdp_utilisateur'])){
+
+            echo '<script language="javascript">';
+            echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Les mots de passe ne correspondent pas ne faites pas de bêtises qui pourraient nuire à un des utilisateurs.");';
+            echo '</script>';
+
+            } else{
+
+                if($aaa == true){
+                    var_dump($aaa);
+                    $idDelete = $aaa['id_utilisateur'];
+                    $user->setId_user($idDelete);
+                    $user->deleteUser();
+
+                    echo '<script language="javascript">';
+                    echo 'alert("Votre compte a bien été supprimé !!!!!!!!!!!!
+                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");';
+                    echo '</script>';
+                    $_SESSION['utilisateur']='';
+                    
+                    session_destroy();
+                    header('Location: ./index.php');
+                    exit();
+                }else{
+                    echo '<script language="javascript">';
+            echo 'alert("Il y a encore une merde le aaa est false");';
+            echo '</script>';
+                }
+            }
+
+
+    }
+
 }
 
 ?>

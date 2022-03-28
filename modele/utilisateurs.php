@@ -197,6 +197,20 @@ Class User {
         $stmt->execute();
         return $stmt;
     }
+    public function deleteUser() {
+        $myQuery = 'DELETE
+                    FROM
+                        '.$this->table.'
+                    WHERE
+                        id_utilisateur = :id_user';
+        $stmt = $this->connect->prepare($myQuery);
+
+        $stmt->bindParam(':id_user', $this->id_user);
+
+        $stmt->execute();
+        return $stmt;
+    }
+
 }
 
 ?>
