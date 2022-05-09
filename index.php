@@ -17,7 +17,7 @@
     <title>Verse - enjoy the game!</title>
 </head>
 
-<body id="app">
+<body >
 
     <header>
         <p> Powered by <a href="https://www.twitch.com" target="_blank">Twitch</a><i class="fab fa-twitch"></i></p>
@@ -26,7 +26,7 @@
 
     <div class="container" id="accueil">
 
-        <div class="row h-100 align-items-center ">
+        <div class="row align-items-center ">
 
 
             <div class="col-lg-6 col-sm-12 lead side1">
@@ -40,12 +40,13 @@
 
 
                     </p>
+                    <iframe width="75%" height="20%" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
 
-            <div class="col-lg-5 col-sm-12 col-lg-offset-1 no-gutters text-center" id="buttons">
+            <div class="col-lg-5 offset-lg-1 col-sm-8 offset-sm-2 no-gutters text-center" id="buttons">
                 <nav class="button">
-                    <p style="margin-bottom:10px;">Lance-toi ;)</p>
+                    <h3 style="margin-bottom:10px;color:rgb(119, 68, 196);">Lance-toi dans l'aventure !</h3>
 
                     <div id="join">
                         <button class="btn btn-primary" onclick="window.location.href = './inscription.php';">Rejoins-nous !</button>

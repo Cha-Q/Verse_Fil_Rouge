@@ -20,7 +20,7 @@
         <p> Powered by <a href="www.twitch.com">Twitch</a><i class="fab fa-twitch"></i></p>
     </header>
 
-	<h2 >Bienvenue sur ton Verse <?= $_SESSION['login']; ?></h2>
+	<h2 >Bienvenue dans ton Verse <?= $_SESSION['login']; ?></h2>
 
     <nav class="navbar navbar-expand-lg bg-light">
 

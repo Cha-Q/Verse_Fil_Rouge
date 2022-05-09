@@ -30,11 +30,11 @@
             </ul>
         </nav> -->
     </header>
-    <?= $msg?>
+    
 	<div class="container " id="connection">
 
     <h1 class="text-center" style="color:black;">Veuillez entrer vos informations pour rejoindre votre espace</h1>
-
+    <?= $msg?>
         <div class="form-group">
             
             <form action="" method="post">

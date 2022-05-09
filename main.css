@@ -1,3 +1,49 @@
+/* Scrollbar style */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #74747488;
+    border: 31px none #ffffff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b6a6a;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #a3a3a3;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #f2f2f2;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #f5f5f5;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* fin style scrollbar */
+
 /* template principal copié sur chaque pages */
 
 body {
@@ -15,14 +61,12 @@ body {
     padding: 0;
 }
 
-#app * {
-    font-size: 3vh;
-}
-
 #accueil {
     height: 100%;
 }
-
+#accueil>div{
+    height: 100%;
+}
 header {
     position: fixed;
     right: 0;
@@ -49,13 +93,27 @@ p {
 nav {
     margin-top: 30px;
 }
+.side1{
+    font-size: 18px;
+}
+.side1>div>p{
+    text-align: center;
+}
+.side1 div>h1 {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
 
-.side1 {}
-
+.side1 div>iframe{
+    margin: auto;
+    display:block;
+    margin-top: 10px;
+}
 
 /* modification sur les boutons */
 
 .btn-primary {
+    font-size: 18px;
     border-radius: 30px;
     padding: 1% 2%;
     min-width: 100px;
@@ -138,7 +196,6 @@ label {
 
 .submit {
     width: 100%;
-    margin-bottom: 80px;
 }
 
 h2 {
@@ -177,6 +234,7 @@ h2 {
 
 nav {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 ul {
@@ -276,5 +334,31 @@ h2 {
     }
 }
 
+@media screen and (max-width: 990px) {
+    #accueil>div{
+        height: 60%;
+    }
+    .side1{
+        text-align: center;
+    }
+    .side1>div>h1{
+        margin-top:40px;
+    }
+    .container>div #buttons{
+        margin-top: 50px;
+    }
+}
 
+@media screen and (max-width: 375px) {
+    .container{
+        width:100%;
+    }
+    iframe{
+        visibility: hidden;
+    }
+    .side1{
+        margin-top: 20px;
+    }
+
+}
 /* responsive inscription fin */

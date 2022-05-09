@@ -6,7 +6,7 @@ include_once('./modele/utilisateurs.php');
 
 
 
-$msg = '<h1 style="color:blue;"> huhu </h1>';
+$msg = ' ';
 
     
     if(isset($_POST['login']) && isset($_POST['mdp']) ){
@@ -36,7 +36,6 @@ $msg = '<h1 style="color:blue;"> huhu </h1>';
 
                     if(isset($_SESSION['id']) && isset($_SESSION['login'] )){
                         $value = $_SESSION['id'];
-                        var_dump($_SESSION['id']);
                         header ('location: monespace.php');
                         $msg = " <h3> let's go !!!!!!!!!</h3>";
                     }else{
