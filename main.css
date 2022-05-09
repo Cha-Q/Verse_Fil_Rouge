@@ -226,9 +226,12 @@ h2 {
 
 
 /* début des modifications de monespace */
-
+.navbar-toggler-icon{
+    background-image: url(./view/Images/wrapper.png);
+}
 .navbar {
     padding: 0;
+    transition:0.5s;
     /* Suppression du padding auto de l'attr navbar */
 }
 
@@ -278,6 +281,8 @@ li {
     border-left: 1px solid black;
     padding: 20px;
     margin-right: 0px;
+    width: 150px;
+    text-align: center;
 }
 
 .nav-link:hover {
@@ -286,6 +291,12 @@ li {
 }
 
 
+#deconnect{
+    top: 5px;
+}
+#navbarSupportedContent > ul > li:nth-child(4) > a{
+    border-right: 1px solid black;
+}
 /* fin des modifications de mon espace */
 
 
@@ -334,7 +345,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 994px) {
     #accueil>div{
         height: 60%;
     }
@@ -347,6 +358,17 @@ h2 {
     .container>div #buttons{
         margin-top: 50px;
     }
+    /* navbar monespace */
+    #deconnect{
+        top: 80%;
+    }
+    #navbarSupportedContent > ul > li:nth-child(4) > a{
+        border-right: 0px ;
+    }
+    .navbar-toggler:focus{
+        padding: 0 12px ;
+    }
+    /* fin navbar monespace */
 }
 
 @media screen and (max-width: 375px) {
