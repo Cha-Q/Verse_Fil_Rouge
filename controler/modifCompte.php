@@ -2,11 +2,14 @@
 include_once('./modele/utilisateurs.php');
 include_once('./utils/utils.php');
 
+$msg = '';
+$msg1 = '';
+$msg2 = '';
 // modification du login de l'utilisateur
 $user = new User();
 
 if (isset($_SESSION['login'])) {
-    var_dump($_SESSION);
+    
     //récupération de l'utilisateur
     $log = $_SESSION['login'];
     
@@ -30,9 +33,7 @@ if (isset($_SESSION['login'])) {
 
             if (!password_verify($mdp, $aaa['mdp_utilisateur'])) {
                 
-                echo '<script language="javascript">';
-                echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Le mot de passe ne correspond pas.");';
-                echo '</script>';
+                $msg = '<p> Mauvais mot de passe, try again !</p>';
             } else {
 
                 if ($aaa == true) {
@@ -60,9 +61,7 @@ if (isset($_SESSION['login'])) {
     
         if (!password_verify($prevMdp, $aaa['mdp_utilisateur'])) {
         
-            echo '<script language="javascript">';
-            echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Le mot de passe ne correspond pas.");';
-            echo '</script>';
+            $msg1 = '<p> Mauvais mot de passe, try again !</p>';
         } else {
             if ($aaa == true) {
 
@@ -97,14 +96,12 @@ if (isset($_SESSION['login'])) {
 
             if(!password_verify($mdp1, $aaa['mdp_utilisateur']) && !password_verify($mdp2, $aaa['mdp_utilisateur'])){
 
-            echo '<script language="javascript">';
-            echo 'alert("Etes-vous sûr d\'être celui(celle) que vous prétendez? Les mots de passe ne correspondent pas ne faites pas de bêtises qui pourraient nuire à un des utilisateurs.");';
-            echo '</script>';
+                $msg2 = '<p> Mauvais mot de passe, try again !</p>';
 
             } else{
 
                 if($aaa == true){
-                    var_dump($aaa);
+                    
                     $idDelete = $aaa['id_utilisateur'];
                     $user->setId_user($idDelete);
                     $user->deleteUser();
@@ -120,8 +117,8 @@ if (isset($_SESSION['login'])) {
                     exit();
                 }else{
                     echo '<script language="javascript">';
-            echo 'alert("Il y a encore une merde le aaa est false");';
-            echo '</script>';
+                    echo 'alert("Il y a encore une merde le aaa est false");';
+                    echo '</script>';
                 }
             }
 
