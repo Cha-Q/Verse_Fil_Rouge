@@ -153,11 +153,6 @@ nav p {
     box-shadow: seashell inset 0 0 1em, seashell 0 0 1em;
 }
 
-a i {
-    position: absolute;
-    margin-left: 5px;
-}
-
 
 /* -------------------------------------------------^---^-----------------*/
 
@@ -304,4 +299,8 @@ input {
 
 input:focus {
     color: #a970ff;
+}
+
+#twitch-embed {
+    height: 800px !important;
 }

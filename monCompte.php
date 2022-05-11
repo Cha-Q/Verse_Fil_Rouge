@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php require('./view/header.php'); ?>
+
+    <?= $header; ?>
     
 </body>
 </html>

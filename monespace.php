@@ -23,66 +23,40 @@
     
 </head>
 <body>
-    <header>
-        <p> Powered by <a href="https://www.twitch.com" target="_blank">Twitch </a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
-                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
-                    <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
-            </svg>
-        </p>
-    </header>
+    <?php require('./view/header.php'); ?>
+
+    <?php require('./view/menu.php'); ?>
+
+    <?= $header; ?>
 
 	<h2 style="color:aliceblue;" >Bienvenue dans ton Verse <?= $_SESSION['login']; ?></h2>
 
-    <nav class="navbar navbar-expand-lg bg-light">
-
-        <a class="navbar-brand" href="./index.html">Verse</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="./infoCompte.php">Mon compte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Mes salons</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Mes amis</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-
-            </ul>
-            <form method="POST" >
-                <input value="se deconnecter" id="deconnect" class="btn btn-navbar" name="deconnect" type="submit"></input>
-            </form>
-        </div>
-        
-    </nav>
+    <?= $menu; ?>
 
     <div class="container" id="mainSpace">
-        <h2>Ceci est ta dashboard bienvenu chez toi ! <i class="fab fa-twitch" style="color:blue;"></i></h2>
+        <h2>Ceci est ta dashboard bienvenu chez toi !
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="purple" class="bi bi-twitch" viewBox="0 0 16 16">
+                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                    <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+            </svg>
+        </h2>
 
         <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">https://www.twitch.tv/</span>
         </div>
-        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ex : Nom d'une chaîne de streaming">
         </div>
-    <script src= "http://player.twitch.tv/js/embed/v1.js" ></script>
+
+
     <div id="PLAYER_DIV_ID" class="text-center" >
-        <span id="player"></span>
+        
     </div>
-    
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
