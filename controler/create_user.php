@@ -3,7 +3,8 @@
     include_once('./modele/utilisateurs.php');
     include_once('./utils/utils.php');
 
-    
+    $msg = '';
+    $msg1 = '';
     
     // récupération des informations entrée par l'utilisateur
     if (isset($_POST['radioS']) 
@@ -81,13 +82,10 @@
                         } else{
                             echo "c'est bon ton compte est créé le sang !";
                             session_start();
-                            
-                            
                             $_SESSION['login'] = $login;
                             $_SESSION['mail'] = $mail_user;
                             $_SESSION['age'] = $age_user;
                             header ('location: monespace.php');
-
                         }
                     
                     }
@@ -97,11 +95,11 @@
             echo "Les informations que vous avez entré ne sont pas valides";
         }
         }else{
-            echo "Les adresses mail que vous avez entré ne correspondent pas";
+           $msg = "Les adresses mail que vous avez entré ne correspondent pas !";
         }
         
     } else{
-        echo "Vos mots de passes sont différents !";
+        $msg1 = "Les mots de passes sont différents !";
     }
         
         

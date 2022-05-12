@@ -2,7 +2,7 @@
 
 include('./connect/connect.php');
 
-class genres{
+class Genres{
     public $connect;
     public $table = 'genres';
 

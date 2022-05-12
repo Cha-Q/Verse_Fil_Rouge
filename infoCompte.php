@@ -1,4 +1,5 @@
 <?php session_start(); 
+
 include_once('./controler/modifCompte.php');
 include('./controler/deconnexion.php');
 ?>
@@ -13,10 +14,7 @@ include('./controler/deconnexion.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     
-    <link rel="apple-touch-icon" sizes="180x180" href="./view/Images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./view/Images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./view/Images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
@@ -34,7 +32,10 @@ include('./controler/deconnexion.php');
     <?= $menu; ?>
 
     <div class="container" id="modifCompte">
+        <h1 style="text-align: center; color: red;"> Voici vos informations <?= $_SESSION['login'];?></h1>
 
+        <h3>Nom :</h3>
+        <p></p>
         <form action="" method="post">
 
             <h2>Modifiez vos informations</h2>

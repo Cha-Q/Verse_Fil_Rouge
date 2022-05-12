@@ -2,7 +2,7 @@
 
 include('./connect/connect.php');
 
-class droits{
+class Droits{
     public $connect;
     public $table = 'droits';
 

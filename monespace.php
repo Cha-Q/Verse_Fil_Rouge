@@ -1,7 +1,7 @@
 <?php
     session_start();
     include('./controler/deconnexion.php');
-    
+    include('./controler/article_user.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./view/Images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./view/Images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./view/Images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest"> -->
-    
     <title>Mon space</title>
     
 </head>
@@ -47,8 +42,17 @@
         </div>
         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ex : Nom d'une chaîne de streaming">
         </div>
-
-
+<!-- début oheeeeeeeeeeeeeefbzubfBFZMUIFBFM -->
+        <form method="post" action="">
+        <div class="form-group text-center">
+        
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="texte_article" placeholder="Quelque chose à partager ?" rows="3"></textarea>
+            <button class="btn btn-primary col-2 i" type="submit" name="Newmdp">Confirmer</button>
+        </div>
+        </form>
+        <?= $content ?>
+        <!-- other thing -->
     <div id="PLAYER_DIV_ID" class="text-center" >
         
     </div>
