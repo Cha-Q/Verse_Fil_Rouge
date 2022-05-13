@@ -105,6 +105,10 @@ Class User {
                         *
                     FROM
                         '.$this->table.'
+                    Join
+                        genres
+                    ON
+                        genres.id_genre = utilisateurs.id_genre
                     Where
                         mail_utilisateur = :mail
                     OR 

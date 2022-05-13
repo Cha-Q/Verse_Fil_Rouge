@@ -1,5 +1,6 @@
 <?php
     include_once('./controler/create_user.php');
+    
 ?>
 
 <!DOCTYPE html>

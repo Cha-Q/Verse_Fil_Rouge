@@ -1,7 +1,10 @@
 <?php session_start(); 
-
-include_once('./controler/modifCompte.php');
+include_once('./controler/info_compte.php');
 include('./controler/deconnexion.php');
+
+    if(!$_SESSION['login']){
+        header('Location: index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -34,10 +37,33 @@ include('./controler/deconnexion.php');
     <div class="container" id="modifCompte">
         <h1 style="text-align: center; color: red;"> Voici vos informations <?= $_SESSION['login'];?></h1>
 
-        <h3>Nom :</h3>
-        <p></p>
-        <form action="" method="post">
+        <p>votre nom : <?= $aaa['nom_utilisateur'];?> </p>
+        <p>votre prénom : <?= $aaa['prenom_utilisateur'];?></p>
+        <p>votre age : <?= $aaa['age_utilisateur'];?></p>
+        <p>vous êtes une : <?= $aaa['nom_genre']; ?></p>
+        <!-- ici à            -->
+    
 
+
+        <!-- la modale !  la modale -->
+        <div class="modal-container">   
+            <div class="overlay modal-trigger">
+
+            </div>
+            <div class="modal">
+                <button class="close-modal modal-trigger"> X</button>
+                <h1>COUCOU</h1>
+            </div>
+        </div>
+
+        <button class="modal-btn modal-trigger"> Open da door</button>
+
+
+
+
+        <!-- fin modale :'() -->
+        <form action="" method="post">
+        
             <h2>Modifiez vos informations</h2>
             <?= $msg?>
             <div class="form-group form-check ">
@@ -49,7 +75,7 @@ include('./controler/deconnexion.php');
                 <label class="form-input-label" for="mdp-newlogin">Mot de passe : </label>
                 <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
             
-                <button class="btn btn-primary col-2 i" type="submit" name="Newlogin">Confirmer</button>
+                <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newlogin">Confirmer</button>
             </div>
             
         </form>
@@ -63,7 +89,7 @@ include('./controler/deconnexion.php');
                 <input class="form-control" type="password" name="mdp-newmdp"  maxlength="15" />
             
                 
-                <button class="btn btn-primary col-2 i" type="submit" name="Newmdp">Confirmer</button>
+                <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newmdp">Confirmer</button>
             </div>
         </form>
 
@@ -77,13 +103,14 @@ include('./controler/deconnexion.php');
                     <label class="form-input-label" for="mpdConf">Confirmez votre mot de passe : </label>
                     <input class="form-control" type="password" name="mpdConf"  maxlength="15" />
                     
-                    <button class="btn btn-primary col-2 i" type="submit" name="delete">Confirmer</button>
+                    <button class="btn btn-primary offset-10 col-2 i" type="submit" name="delete">Confirmer</button>
             </div>
         </form>
-
+        <!-- ici -->
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="player.js"></script>
 </body>
 </html>

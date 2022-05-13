@@ -31,14 +31,13 @@
 while ($aaa = $allPost->fetch())
     {
         $tab[] = $aaa;
-    
 }
 
-rsort($tab);
+// rsort($tab);
 
 foreach ($tab as $aaa){
-    if($aaa['id_utilisateur'] == null){
-        $aaa['id_utilisateur'] = 'Anonymous';
+    if($aaa['login_utilisateur'] == null){
+        $aaa['login_utilisateur'] = 'Anonymous';
     } else{
         // $bitch = new User();
         // $bitch->setId_User($aaa['id_utilisateur']);
@@ -62,17 +61,20 @@ foreach ($tab as $aaa){
             color: red;
         }
     </style>
+
     <div class="container">
         <div class="posts col-lg-10 offset-lg-2 col-sm-12" style="color:black;">
             <h3 style="color:black;">
-                    De <?= htmlspecialchars($aaa['id_utilisateur']) ?>
+                    De <?= htmlspecialchars($aaa['login_utilisateur']) ?>
                     <em style="color:black;"> en la date du <?= $aaa['date_article'] ?></em>
             </h3>
+
             <p style="color:black;">
                 <?= nl2br(htmlspecialchars($aaa['texte_article'])) ?>
-                
             </p>
+
         </div>
+
     </div>
 <?php
 }

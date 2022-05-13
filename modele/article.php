@@ -57,17 +57,18 @@ Class Article{
     }
 
     public function getAllArticle(){
-        $myQuery = 'SELECT * FROM '.$this->table.';';
-        // $myQuery = 'SELECT
-        //                 texte_article = :texte_article, 
-        //                 date_article = :date_article,
-        //                 utilisateurs.login_user
-        //             FROM
-        //                 '.$this->table.'
-        //             LEFT JOIN
-        //                 user
-        //             ON 
-        //                 user.id_user = '.$this->id_utilisateur.';';
+        // $myQuery = 'SELECT * FROM '.$this->table.';';
+        $myQuery = 'SELECT
+                        login_utilisateur,
+                        texte_article, 
+                        date_article
+                    FROM
+                        articles
+                    LEFT JOIN
+                        utilisateurs
+                    ON 
+                        utilisateurs.id_utilisateur = articles.id_utilisateur
+                        ORDER BY date_article desc';
 
         $stmt = $this->connect->prepare($myQuery);
         // $stmt->bindParam(':texte_article', $this->texte_article);

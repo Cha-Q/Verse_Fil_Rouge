@@ -2,6 +2,9 @@
     session_start();
     include('./controler/deconnexion.php');
     include('./controler/article_user.php');
+    if(!$_SESSION['login']){
+        header('Location: index.php');
+    }
 ?>
 
 <!DOCTYPE html>

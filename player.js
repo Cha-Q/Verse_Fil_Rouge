@@ -50,3 +50,14 @@ let count = 0;
 
 // };
 // let player = new Twitch.Player("PLAYER_DIV_ID", options);
+
+let modalContainer = document.querySelector('.modal-container');
+
+let modalLauncher = document.querySelectorAll('.modal-trigger');
+
+modalLauncher.forEach(element =>
+    element.addEventListener('click', (toggleModal)));
+
+function toggleModal() {
+    modalContainer.classList.toggle("active")
+}
