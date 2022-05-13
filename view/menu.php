@@ -18,7 +18,7 @@
             <a class="nav-link" href="./infoCompte.php">Mon compte</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Mes salons</a>
+            <a class="nav-link" href="./visionner.php">Visionner</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Mes amis</a>

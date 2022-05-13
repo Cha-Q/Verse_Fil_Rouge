@@ -1,10 +1,10 @@
 <?php
 
+// 
 include('./connect/connect.php');
 
-
 // La classe utilisateur et son constructeur
-Class Article {
+Class Article{
 
 
     public $connect;
@@ -57,12 +57,21 @@ Class Article {
     }
 
     public function getAllArticle(){
-        $myQuery = 'SELECT
-                    *
-                    FROM
-                        '.$this->table.';';
+        $myQuery = 'SELECT * FROM '.$this->table.';';
+        // $myQuery = 'SELECT
+        //                 texte_article = :texte_article, 
+        //                 date_article = :date_article,
+        //                 utilisateurs.login_user
+        //             FROM
+        //                 '.$this->table.'
+        //             LEFT JOIN
+        //                 user
+        //             ON 
+        //                 user.id_user = '.$this->id_utilisateur.';';
 
         $stmt = $this->connect->prepare($myQuery);
+        // $stmt->bindParam(':texte_article', $this->texte_article);
+        // $stmt->bindParam(':date_article', $this->date_article);
         $stmt->execute();
         return $stmt;
     }
@@ -146,14 +155,12 @@ Class Article {
         $stmt->execute();
     }
 
-public function getUserName(){
-    $myQuery = "SELECT login_utilisateur
-                From utilisateur
-                INNER JOIN article
-                ON article.id_utilisateur = utilisateur.id_utilisateur;";
+    // public function userName(){
+    //     $myQuery = 'SELECT login_utilisateur from articles JOIN utilisateurs ON utilisateurs.id_utilisateur = '.$this->id_utilisateur.';';
 
-    $stmt = $this->connect->prepare($myQuery);
-    $stmt->execute();
-}
+    //     $stmt = $this->connect->prepare($myQuery);
+    //     $stmt->bindParam(':id_utilisateur', $this->id_utilisateur);
+    //     $stmt->execute();
+    // }
 }
 ?>

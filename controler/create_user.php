@@ -80,8 +80,10 @@
                             echo " Il y a eu une erreur lors de l'enregistrement veuillez entrer vos informations à nouveau";
 
                         } else{
+                            $req = $return->fetch();
                             echo "c'est bon ton compte est créé le sang !";
                             session_start();
+                            $_SESSION['id'] = $req['id_utilisateur'];
                             $_SESSION['login'] = $login;
                             $_SESSION['mail'] = $mail_user;
                             $_SESSION['age'] = $age_user;

@@ -117,6 +117,19 @@ Class User {
         return $stmt;
     }
 
+    public function getSingleUserById(){
+        $myQuery = 'SELECT
+                        *
+                    FROM
+                        '.$this->table.'
+                    Where
+                        id_utilisateur = :id_user';
+                    
+        $stmt = $this->connect->prepare($myQuery);
+        $stmt->bindParam(':id_user', $this->id_user);
+        $stmt->execute();
+        return $stmt;
+    }
     // Requête de création d'utilisateur
     public function createUser(){
         $myQuery = 'INSERT INTO
