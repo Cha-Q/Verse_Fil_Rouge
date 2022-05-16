@@ -23,7 +23,7 @@ $msg = ' ';
         }
         
         $result = $req->fetch();
-        var_dump($result);
+        
         
         if($result == true){
             

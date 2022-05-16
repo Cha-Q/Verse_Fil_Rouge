@@ -37,7 +37,7 @@ include('./controler/deconnexion.php');
     <div class="container" id="modifCompte">
         <h1 style="text-align: center; color: red;"> Voici vos informations <?= $_SESSION['login'];?></h1>
 
-        <p>votre nom : <?= $aaa['nom_utilisateur'];?> </p>
+        <p>votre nom : <?= $aaa['nom_utilisateur'];?> </p> <button class="modal-btn modal-trigger"> Open da door</button>
         <p>votre prénom : <?= $aaa['prenom_utilisateur'];?></p>
         <p>votre age : <?= $aaa['age_utilisateur'];?></p>
         <p>vous êtes une : <?= $aaa['nom_genre']; ?></p>
@@ -46,48 +46,56 @@ include('./controler/deconnexion.php');
 
 
         <!-- la modale !  la modale -->
-        <div class="modal-container">   
-            <div class="overlay modal-trigger">
 
-            </div>
-            <div class="modal">
-                <button class="close-modal modal-trigger"> X</button>
-                <h1>COUCOU</h1>
+        <div class="modal-container">   
+            <div class="overlay modal-trigger"></div>
+            <div class="modale">
+                <button class="close-modal modal-trigger">X</button>
+                <h2>Supprimez définitivement votre compte</h2>
+                <form action="" method="post">
+                    <?= $msg2?>
+                    <div class="form-group form-check ">
+                        <label class="form-input-label" for="mdpSuppr">Entrez votre mot de passe </label>
+                        <input class="form-control" type="password" name="mdpSuppr" maxlength="50" />
+                
+                        <label class="form-input-label" for="mpdConf">Confirmez votre mot de passe : </label>
+                        <input class="form-control" type="password" name="mpdConf"  maxlength="15" />
+                        
+                        <button class="btn btn-primary offset-10 col-2 i" type="submit" name="delete">Confirmer</button>
+                    </div>
+                </form>
             </div>
         </div>
-
-        <button class="modal-btn modal-trigger"> Open da door</button>
-
-
-
 
         <!-- fin modale :'() -->
         <form action="" method="post">
         
-            <h2>Modifiez vos informations</h2>
-            <?= $msg?>
-            <div class="form-group form-check ">
-            
-                <label class="form-input-label" for="newlogin">Nouveau pseudo : </label>
-                <input class="form-control" type="text" name="newlogin" maxlength="50" />
-            
-            
-                <label class="form-input-label" for="mdp-newlogin">Mot de passe : </label>
-                <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
-            
-                <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newlogin">Confirmer</button>
-            </div>
-            
+        <h2>Modifiez vos informations</h2>
+        <?= $msg?>
+        <div class="form-group form-check ">
+    
+            <label class="form-input-label" for="newlogin">Nouveau pseudo : </label>
+            <input class="form-control" type="text" name="newlogin" maxlength="50" />
+        
+        
+            <label class="form-input-label" for="mdp-newlogin">Mot de passe : </label>
+            <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
+        
+            <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newlogin">Confirmer</button>
+        </div>
+        
         </form>
+        
+        
         <form action="" method="post">
         <?= $msg1?>
-            <div class="form-group form-check ">
-                <label class="form-input-label" for="newmdp">Nouveau mot de passe : </label>
-                <input class="form-control" type="password" name="newmdp" maxlength="50" />
-            
-                <label class="form-input-label" for="mdp-newmdp">Mot de passe actuel : </label>
-                <input class="form-control" type="password" name="mdp-newmdp"  maxlength="15" />
-            
+        <div class="form-group form-check ">
+            <label class="form-input-label" for="newmdp">Nouveau mot de passe : </label>
+            <input class="form-control" type="password" name="newmdp" maxlength="50" />
+        
+            <label class="form-input-label" for="mdp-newmdp">Mot de passe actuel : </label>
+            <input class="form-control" type="password" name="mdp-newmdp"  maxlength="15" />
+        
                 
                 <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newmdp">Confirmer</button>
             </div>

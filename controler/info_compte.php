@@ -5,6 +5,7 @@ include_once('./utils/utils.php');
 $msg = '';
 $msg1 = '';
 $msg2 = '';
+
 // modification du login de l'utilisateur
 $user = new User();
 
@@ -33,7 +34,7 @@ if (isset($_SESSION['login'])) {
 
             if (!password_verify($mdp, $aaa['mdp_utilisateur'])) {
                 
-                $msg = '<p> Mauvais mot de passe, try again !</p>';
+                $msg = '<p style="text-align: center;"> Mauvais mot de passe, try again !</p>';
             } else {
 
                 if ($aaa == true) {
