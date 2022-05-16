@@ -19,7 +19,7 @@
 </head>
 
 <body >
-    <?php require('./view/header.php'); ?>
+    <?php include('./view/header.php'); ?>
 
     <?= $header; ?>
 
@@ -36,11 +36,11 @@
                         <br> partagez et divertissez-vous avec vos amis.
 
                     </p>
-                    <iframe width="80%" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="80%" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" nofollow allowfullscreen></iframe>
                 </div>
             </div>
 
-            <div class="col-lg-5 offset-lg-1 col-sm-8 offset-sm-2 no-gutters text-center" id="buttons">
+            <div class="col-lg-5 offset-lg-1 col-sm-12 no-gutters text-center ibtn" id="buttons">
                 <nav class="button">
                     <h3 style="margin-bottom:10px;color:rgb(119, 68, 196);">Lance-toi dans l'aventure !</h3>
 

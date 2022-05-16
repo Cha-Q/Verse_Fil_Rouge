@@ -38,39 +38,18 @@ while ($aaa = $allPost->fetch())
 foreach ($tab as $aaa){
     if($aaa['login_utilisateur'] == null){
         $aaa['login_utilisateur'] = 'Anonymous';
-    } else{
-        // $bitch = new User();
-        // $bitch->setId_User($aaa['id_utilisateur']);
-        // $beta = $bitch->getSingleUserById();
-        // $bbb = $beta->fetch();
-        // $aaa['id_utilisateur'] = $bbb['login_utilisateur'];
-    }
+    } 
 ?>
-    <style>
-        .posts{
-            border: 1px solid black;
-            border-radius: 25px;
-            margin: 0 auto 20px 0;
-            padding: 20px 15px;
-            width: 100%;
-            word-wrap: break-word;
-            max-height: 300px;
-            overflow: hidden;
-        }
-        .posts:nth-child(2){
-            color: red;
-        }
-    </style>
 
     <div class="container">
         <div class="posts col-lg-10 offset-lg-2 col-sm-12" style="color:black;">
             <h3 style="color:black;">
-                    De <?= htmlspecialchars($aaa['login_utilisateur']) ?>
+                    De <?= $aaa['login_utilisateur'] ?>
                     <em style="color:black;"> en la date du <?= $aaa['date_article'] ?></em>
             </h3>
 
             <p style="color:black;">
-                <?= nl2br(htmlspecialchars($aaa['texte_article'])) ?>
+                <?= $aaa['texte_article'] ?>
             </p>
 
         </div>

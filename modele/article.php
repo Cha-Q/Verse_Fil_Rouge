@@ -68,7 +68,7 @@ Class Article{
                         utilisateurs
                     ON 
                         utilisateurs.id_utilisateur = articles.id_utilisateur
-                        ORDER BY date_article desc';
+                        ORDER BY date_article desc limit 10';
 
         $stmt = $this->connect->prepare($myQuery);
         // $stmt->bindParam(':texte_article', $this->texte_article);

@@ -45,9 +45,9 @@
         <form method="post" action="">
             <div class="form-group text-center">
             
-                <label for="exampleFormControlTextarea1">Exprimez-vous, et intégrez la commuanuté dès maintenant</label>
+                <label for="posts">Exprimez-vous, et intégrez la commuanuté dès maintenant</label>
 
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="texte_article" placeholder="Quelque chose à partager ?" rows="3"></textarea>
+                <textarea class="form-control" id="posts" name="texte_article" placeholder="Quelque chose à partager ?" rows="3" maxlength="255"></textarea>
 
                 <button class="btn btn-primary col-lg-3 col-md-4 offset-lg-9 offset-ml-6 i" type="submit" name="Newmdp">Confirmer</button>
             </div>

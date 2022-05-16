@@ -175,6 +175,10 @@ nav {
     width: 70%;
 }
 
+.container-lg {
+    max-width: 900px;
+}
+
 form {
     width: 100%;
 }
@@ -274,8 +278,6 @@ li {
 #mainSpace {
     background: rgba( 255, 255, 255, 0.9);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
-    backdrop-filter: blur( 0px);
-    -webkit-backdrop-filter: blur( 0px);
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
     min-height: 800px;
@@ -367,12 +369,6 @@ h2 {
 
 /* responsive inscription début */
 
-@media screen and (max-width: 1200px) {
-    #radioMF {
-        flex-direction: column;
-    }
-}
-
 @media screen and (max-width: 994px) {
     #accueil>div {
         height: 60%;
@@ -384,6 +380,14 @@ h2 {
         margin-top: 40px;
         font-weight: bolder;
         font-size: 60px;
+    }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .side1+#buttons {
+        width: 100% !important;
+        margin: auto;
     }
     .container>div #buttons {
         margin-top: 50px;
@@ -410,6 +414,9 @@ h2 {
     }
     .side1 {
         margin-top: 20px;
+    }
+    .side1>div {
+        max-height: 450px;
     }
 }
 
@@ -476,4 +483,33 @@ h2 {
     color: #333333;
     font-family: Montserrat, "Helvetica Neue", OpenSans-Serif;
     font-weight: 800;
+}
+
+.posts {
+    border: 2px solid rgba(128, 0, 128, 0.603);
+    border-radius: 25px;
+    margin: 0 auto 20px 0;
+    padding: 20px 15px;
+    width: 100%;
+    font-weight: 800;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow: hidden;
+    background: rgba(240, 248, 255, 0.712);
+}
+
+.posts>* {
+    color: rgb(119, 68, 196) !important;
+}
+
+em {
+    font-size: 12px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.posts:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 5px 5px 25px 2px rgba(119, 68, 196, 0.7);
+    box-shadow: 5px 5px 25px 2px rgba(119, 68, 196, 0.7);
 }
