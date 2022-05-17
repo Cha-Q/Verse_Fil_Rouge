@@ -4,7 +4,7 @@
     include('../controler/article_user.php');
 
     if(!$_SESSION['login']){
-        header('Location: ./index.php');
+        header('Location: ../index.php');
     }
 ?>
 

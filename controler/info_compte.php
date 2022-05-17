@@ -129,7 +129,7 @@ if (isset($_SESSION['login'])) {
                     $_SESSION['utilisateur']='';
                     
                     session_destroy();
-                    header('Location: ./index.php');
+                    header('Location: ../index.php');
                     exit();
                 }else{
                     echo '<script language="javascript">';
