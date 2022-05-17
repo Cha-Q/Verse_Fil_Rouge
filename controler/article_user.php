@@ -1,7 +1,7 @@
 <?php
 
-    require_once('./modele/article.php');
-    include_once('./utils/utils.php');
+    require_once('../modele/article.php');
+    include_once('../utils/utils.php');
 
     if (isset($_POST['texte_article']) && !empty($_POST['texte_article']))
     {

@@ -65,6 +65,10 @@ body {
     font-family: 'Radio Canada', sans-serif !important;
 }
 
+#accueil {
+    margin-top: 150px;
+}
+
 #accueil+#accueil>div {
     height: 100%;
 }
@@ -262,7 +266,7 @@ h2 {
 /* début des modifications de monespace */
 
 .navbar-toggler-icon {
-    background-image: url(./view/Images/wrapper.png);
+    background-image: url(../Images/wrapper.png);
 }
 
 .navbar {
@@ -380,6 +384,10 @@ h2 {
 /* responsive inscription début */
 
 @media screen and (max-width: 994px) {
+    #accueil {
+        margin-top: 40px;
+        transition: 0.4s;
+    }
     #accueil>div {
         height: 60%;
     }

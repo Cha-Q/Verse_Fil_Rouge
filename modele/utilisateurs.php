@@ -1,6 +1,6 @@
 <?php
 
-include('./connect/connect.php');
+include('../connect/connect.php');
 
 
 // La classe utilisateur et son constructeur

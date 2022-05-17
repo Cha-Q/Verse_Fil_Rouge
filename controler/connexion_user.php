@@ -1,7 +1,7 @@
 <?php
 
-include_once('./controler/create_user.php');
-include_once('./modele/utilisateurs.php');
+include_once('../controler/create_user.php');
+include_once('../modele/utilisateurs.php');
 
 
 

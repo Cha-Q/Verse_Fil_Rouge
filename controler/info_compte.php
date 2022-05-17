@@ -1,6 +1,6 @@
 <?php
-include_once('./modele/utilisateurs.php');
-include_once('./utils/utils.php');
+include_once('../modele/utilisateurs.php');
+include_once('../utils/utils.php');
 
 $msg = '';
 $msg1 = '';
