@@ -32,7 +32,7 @@
 
             $name_user = valid_donnees($_POST['nom']);
             $firstName_user = valid_donnees($_POST['prenom']);
-            $age_user = valid_donnees($_POST['age']);
+            $age_user = $_POST['age'];
 
             $mdp_user = password_hash($mdp_user, PASSWORD_BCRYPT);
 

@@ -2,7 +2,7 @@
 
     Class Bdd{
         private $host = 'localhost';
-        private $dbname = 'projet_verse';
+        private $dbname = 'verse';
         private $userName = 'root';
         private $password = '';
 

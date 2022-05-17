@@ -6,6 +6,7 @@ $msg = '';
 $msg1 = '';
 $msg2 = '';
 
+
 // modification du login de l'utilisateur
 $user = new User();
 
@@ -24,7 +25,13 @@ if (isset($_SESSION['login'])) {
     $user->setMail_user($aaa['mail_utilisateur']);
     
     $user->setMdp_user($aaa['mdp_utilisateur']);
-
+    
+    $birthday = new DateTime($aaa['age_utilisateur']);
+    $today = new DateTime(date('Y-m-d'));
+    
+    $ageVal = $birthday->diff($today);
+    $_SESSION['age'] = $ageVal->y;
+    
     // modification du login de l'utilisateur'
     if (isset($_POST['newlogin']) && !empty($_POST['newlogin']) && isset($_POST['mdp-newlogin']) && !empty($_POST['mdp-newlogin'])) {
 

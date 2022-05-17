@@ -39,7 +39,7 @@ include('./controler/deconnexion.php');
 
         <p>votre nom : <?= $aaa['nom_utilisateur'];?> </p> <button class="modal-btn modal-trigger"> Open da door</button>
         <p>votre prénom : <?= $aaa['prenom_utilisateur'];?></p>
-        <p>votre age : <?= $aaa['age_utilisateur'];?></p>
+        <p>votre age : <?= $_SESSION['age'];?></p>
         <p>vous êtes une : <?= $aaa['nom_genre']; ?></p>
         <!-- ici à            -->
     

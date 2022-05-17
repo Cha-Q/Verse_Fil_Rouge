@@ -78,7 +78,7 @@
 
                     <label for="age">Age :</label>
                     <br>
-                    <input class="form-control" type="number" name="age" placeholder=" " maxlength="2" id="age" />
+                    <input class="form-control" type="date" name="age" placeholder=" " min="1910-01-01" id="age" />
 
                 </div>
 
