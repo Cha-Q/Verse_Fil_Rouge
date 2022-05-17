@@ -76,7 +76,7 @@
 
                 <div class="form-group">
 
-                    <label for="age">Age :</label>
+                    <label for="age">Date de naissance :</label>
                     <br>
                     <input class="form-control" type="date" name="age" placeholder=" " min="1910-01-01" id="age" />
 
@@ -87,7 +87,7 @@
                     <br>
                     <input class="form-control" type="email" name="mail" placeholder="votreMail@smthg.com" />
 
-                    <label for="mail2">Mail de verification :</label>
+                    <label for="mail2">Confirmez votre mail :</label>
                     <br>
                     <input class="form-control" type="email" name="mail2" placeholder="votreMail@smthg.com" />
                 </div>
@@ -99,7 +99,7 @@
                     <br>
                     <input class="form-control" type="password" name="mdp" placeholder="Hackerman" maxlength="20" autocomplete="password" />
 
-                    <label for="password">Vérifiez votre mot de passe :</label>
+                    <label for="password">Confirmez votre mot de passe :</label>
                     <br>
                     <input class="form-control" type="password" name="mdp2" placeholder="Hackerman" maxlength="20" autocomplete="password" />
 

@@ -16,10 +16,10 @@ include('./controler/deconnexion.php');
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    
+    <link rel="stylesheet" href="main.css">
     
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    
 </head>
 <body>
     <?php require('./view/header.php'); ?>
@@ -35,85 +35,89 @@ include('./controler/deconnexion.php');
     <?= $menu; ?>
 
     <div class="container" id="modifCompte">
-        <h1 style="text-align: center; color: red;"> Voici vos informations <?= $_SESSION['login'];?></h1>
+        <h1 class="text-center"> Voici vos informations <?= $_SESSION['login'];?></h1>
+        <h3 class="text-center">Votre nom :  </h3>
+        <p class="col-3 offset-2"> <?= ucwords($aaa['nom_utilisateur']);?></p> 
+        <hr />
+        <h3 class="text-center">Votre prénom : </h3>
+        <p class="col-3 offset-2"><?= ucwords($aaa['prenom_utilisateur']);?></p>
+        <hr />
+        <h3 class="text-center">Votre age : </h3>
+        <p class="col-3 offset-2"><?= $_SESSION['age'];?></p>
+        <hr />
+        <h3 class="text-center">Vous êtes <?= $gender; ?> : </h3>
+        <p class="col-3 offset-2"><?= ucwords($aaa['nom_genre']); ?></p>
+        <hr />
+        <h3 class="text-center">Votre mot de passe : </h3>
+        <div class="row g-0">
+        <p class="col-3 offset-2">************</p>
+        <hr />
+        
+    </div>
+    <div class="row g-0">
+        <button class=" col-2 modal-btn modal-trigger" id="buttonModal"> Modifier vos informations</button>
+    </div>
+        
 
-        <p>votre nom : <?= $aaa['nom_utilisateur'];?> </p> <button class="modal-btn modal-trigger"> Open da door</button>
-        <p>votre prénom : <?= $aaa['prenom_utilisateur'];?></p>
-        <p>votre age : <?= $_SESSION['age'];?></p>
-        <p>vous êtes une : <?= $aaa['nom_genre']; ?></p>
-        <!-- ici à            -->
     
+        
+        
 
-
+        <!-- ici à            -->
         <!-- la modale !  la modale -->
 
         <div class="modal-container">   
             <div class="overlay modal-trigger"></div>
-            <div class="modale">
-                <button class="close-modal modal-trigger">X</button>
-                <h2>Supprimez définitivement votre compte</h2>
-                <form action="" method="post">
-                    <?= $msg2?>
-                    <div class="form-group form-check ">
-                        <label class="form-input-label" for="mdpSuppr">Entrez votre mot de passe </label>
-                        <input class="form-control" type="password" name="mdpSuppr" maxlength="50" />
-                
-                        <label class="form-input-label" for="mpdConf">Confirmez votre mot de passe : </label>
-                        <input class="form-control" type="password" name="mpdConf"  maxlength="15" />
+                <div class="modale">
+                    <button class="close-modal modal-trigger">X</button>
+                    <form action="" method="post">
+                        <h2>Modifiez votre pseudo</h2>
+                        <?= $msg?>
+                        <div class="form-group form-check ">
+                    
+                            <label class="form-input-label" for="newlogin">Nouveau pseudo : </label>
+                            <input class="form-control" type="text" name="newlogin" maxlength="50" />
                         
-                        <button class="btn btn-primary offset-10 col-2 i" type="submit" name="delete">Confirmer</button>
-                    </div>
-                </form>
+                        
+                            <label class="form-input-label" for="mdp-newlogin">Mot de passe : </label>
+                            <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
+                        
+                            <button class="btn btn-primary offset-lg-10 offset-sm-7 col-2 i" type="submit" name="Newlogin">Confirmer</button>
+                        </div>
+                    
+                    </form>
+                    <h2>Modifiez votre mot de passe </h2>
+                    <form action="" method="post">
+                        <?= $msg1?>
+                        <div class="form-group form-check ">
+                            <label class="form-input-label" for="newmdp">Nouveau mot de passe : </label>
+                            <input class="form-control" type="password" name="newmdp" maxlength="50" />
+                        
+                            <label class="form-input-label" for="mdp-newmdp">Mot de passe actuel : </label>
+                            <input class="form-control" type="password" name="mdp-newmdp"  maxlength="15" />
+                        <button class="btn btn-primary offset-lg-10 offset-sm-7 col-2 i" type="submit" name="Newmdp">Confirmer</button>
+                    </form>
+                </div>
             </div>
         </div>
 
         <!-- fin modale :'() -->
-        <form action="" method="post">
-        
-        <h2>Modifiez vos informations</h2>
-        <?= $msg?>
-        <div class="form-group form-check ">
-    
-            <label class="form-input-label" for="newlogin">Nouveau pseudo : </label>
-            <input class="form-control" type="text" name="newlogin" maxlength="50" />
-        
-        
-            <label class="form-input-label" for="mdp-newlogin">Mot de passe : </label>
-            <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
-        
-            <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newlogin">Confirmer</button>
-        </div>
-        
-        </form>
-        
-        
-        <form action="" method="post">
-        <?= $msg1?>
-        <div class="form-group form-check ">
-            <label class="form-input-label" for="newmdp">Nouveau mot de passe : </label>
-            <input class="form-control" type="password" name="newmdp" maxlength="50" />
-        
-            <label class="form-input-label" for="mdp-newmdp">Mot de passe actuel : </label>
-            <input class="form-control" type="password" name="mdp-newmdp"  maxlength="15" />
-        
-                
-                <button class="btn btn-primary offset-10 col-2 i" type="submit" name="Newmdp">Confirmer</button>
-            </div>
-        </form>
-
-        <h2>Supprimez définitivement votre compte</h2>
-        <form action="" method="post">
-        <?= $msg2?>
-            <div class="form-group form-check ">
+        <div class="container">
+            <h2>Vous souhaitez nous quitter?<br> Supprimez votre compte :</h2>
+            <form action="" method="post">
+            <?= $msg2?>
+                <div class="form-group form-check ">
                     <label class="form-input-label" for="mdpSuppr">Entrez votre mot de passe </label>
-                    <input class="form-control" type="password" name="mdpSuppr" maxlength="50" />
+                    <input class="form-control col-8" type="password" name="mdpSuppr" maxlength="50" />
             
                     <label class="form-input-label" for="mpdConf">Confirmez votre mot de passe : </label>
-                    <input class="form-control" type="password" name="mpdConf"  maxlength="15" />
+                    <input class="form-control col-8" type="password" name="mpdConf"  maxlength="15" />
                     
-                    <button class="btn btn-primary offset-10 col-2 i" type="submit" name="delete">Confirmer</button>
-            </div>
-        </form>
+                    <button class="btn btn-primary offset-lg-10 offset-sm-7 col-2 i" type="submit" name="delete">Confirmer</button>
+                </div>
+            </form> 
+        </div>
+        
         <!-- ici -->
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

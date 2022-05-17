@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `genres` (
   `id_genre` int(11) NOT NULL AUTO_INCREMENT,
   `nom_genre` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_genre`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET='utf8';
 
 --
 -- Déchargement des données de la table `genres`

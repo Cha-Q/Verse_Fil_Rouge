@@ -5,7 +5,7 @@ include_once('./utils/utils.php');
 $msg = '';
 $msg1 = '';
 $msg2 = '';
-
+$gender = '';
 
 // modification du login de l'utilisateur
 $user = new User();
@@ -19,7 +19,7 @@ if (isset($_SESSION['login'])) {
     
     $myuser = $user->getSingleUser();
     $aaa = $myuser->fetch();
-
+    
     $user->setId_user($aaa['id_utilisateur']);
     $user->setLogin_user($aaa['login_utilisateur']);
     $user->setMail_user($aaa['mail_utilisateur']);
@@ -31,6 +31,14 @@ if (isset($_SESSION['login'])) {
     
     $ageVal = $birthday->diff($today);
     $_SESSION['age'] = $ageVal->y;
+
+    if($aaa['nom_genre'] == 'Homme'){
+        $gender = 'un';
+    } else if($aaa['nom_genre'] == 'Femme'){
+        $gender = 'une';
+    }else{
+        $gender = 'une magnifique ';
+    }
     
     // modification du login de l'utilisateur'
     if (isset($_POST['newlogin']) && !empty($_POST['newlogin']) && isset($_POST['mdp-newlogin']) && !empty($_POST['mdp-newlogin'])) {

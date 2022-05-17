@@ -65,11 +65,7 @@ body {
     font-family: 'Radio Canada', sans-serif !important;
 }
 
-#accueil {
-    height: 100%;
-}
-
-#accueil>div {
+#accueil+#accueil>div {
     height: 100%;
 }
 
@@ -129,13 +125,13 @@ nav {
 }
 
 
-/* modification sur les boutons */
+/* CSS propre aux différents boutons */
 
 .btn-primary {
     font-size: 18px;
     border-radius: 30px;
     padding: 1% 2%;
-    min-width: 100px;
+    min-width: 110px;
     background-color: aliceblue;
     color: rgb(119, 68, 196);
     font-weight: bold;
@@ -165,11 +161,25 @@ nav {
     margin-bottom: 20px
 }
 
+#buttonModal {
+    min-width: 200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: blueviolet;
+    padding: 5px 15px;
+    color: white;
+}
+
+#buttonModal:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
 
 /* fin modification sur les boutons */
 
 
-/* modification sur le formulaire d'inscription */
+/* CSS propre au formulaired'inscription */
 
 .container {
     width: 70%;
@@ -228,7 +238,7 @@ h2 {
 }
 
 
-/* fin des modifications sur le formulaire d'inscription */
+/* fin formulaire d'inscription */
 
 
 /* Début des modifications sur le fomulaire de connection */
@@ -469,6 +479,11 @@ h2 {
     color: #fff;
 }
 
+.container>h1 {
+    color: rgb(119, 68, 196);
+    font-weight: 700;
+}
+
 .modal h1 {
     margin: 0 0 10px 0;
     font-weight: 500;
@@ -512,4 +527,31 @@ em {
     transform: scale(1.1);
     -webkit-box-shadow: 5px 5px 25px 2px rgba(119, 68, 196, 0.7);
     box-shadow: 5px 5px 25px 2px rgba(119, 68, 196, 0.7);
+}
+
+#noPost>h2 {
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+#modifCompte h3 {
+    color: rgb(119, 68, 196);
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+#modifCompte h3>p {
+    margin-left: 60px !important;
+    width: 20px;
+}
+
+hr {
+    width: 80%;
+    height: 3px !important;
+    color: rgb(119, 68, 196);
+    margin: 10px auto;
 }
