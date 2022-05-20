@@ -42,7 +42,7 @@
 
                     <button class="log btn btn-primary col-3 " type="submit" name="submit" >Valider</button>
                     
-                    <a class="log btn btn-primary col-3" href="./index.php"  type="submit" name="submit">Retour</a>
+                    <a class="log btn btn-primary col-3" href="../index.php"  type="submit" name="submit">Retour</a>
                     
                 </div>
                 
