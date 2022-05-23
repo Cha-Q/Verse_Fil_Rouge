@@ -183,6 +183,8 @@ Class User {
         return $stmt->execute();
         
     }
+
+    // Les deux modeles permettant de vérifier la présence d'un utilisateur 
     public function verifyLogin() {
         $myQuery = 'SELECT
                         *
@@ -214,6 +216,7 @@ Class User {
         $stmt->execute();
         return $stmt;
     }
+
     public function deleteUser() {
         $myQuery = 'DELETE
                     FROM

@@ -15,35 +15,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./CSS/main.css">
-    <title>Cette fois c'est la bonne on s'y met</title>
+    <title>Inscrivez-vous sur Verse</title>
 
 
 </head>
 
 <body>
 
+<!-- Le Header de la page que l'on retrouve sur toutes les pages du site -->
     <?php require('./header.php'); ?>
 
     <?= $header; ?>
 
-    <div class="container-lg " id="inscription">
+
+    <!-- Mise en place de la div qui sera le container du formulaire d'inscription -->
+    <div class="container-lg" id="inscription">
 
         <h2>On t'a préparé un petit formulaire pour faire plus ample connaissance ! (et surtout créer ton compte)<br></h2>
         <div class="form ">
-
+        <?= $error; ?>
 
 
             <form action="" method="post">
 
                 <div class="form-group form-check text-center">
-
-
                     <div id="radioMF">
                         <div>
                             <input class="form-radio-input" type="radio" name="radioS" value="3" checked>
                             <label class="form-radio-label" for="radioL">Licorne</label>
                         </div>
-
 
                         <div>
                             <input class="form-radio-input" type="radio" name="radioS" value="2">
@@ -104,22 +104,19 @@
                     <input class="form-control" type="password" name="mdp2" placeholder="Hackerman" maxlength="20" autocomplete="password" />
 
                 </div>
-            </div>
+            
         
-            <div class="submit text-center ">
+                <div class="submit text-center ">
 
-                <button class="btn btn-primary col-2 " type="submit" name="submit">Valider</button>
+                    <button class="btn btn-primary col-2 " type="submit" name="submit">Valider</button>
 
-                <a class="log btn btn-primary col-2" href="../index.php"  type="submit" name="submit">Retour</a>
+                    <a class="log btn btn-primary col-2" href="../index.php"  type="submit" name="submit">Retour</a>
 
-            </div>
+                </div>
 
+            </form>
 
-
-
-        </form>
-
-    </div>
+        </div>
     </div>
 
 </body>
