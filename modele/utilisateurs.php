@@ -99,7 +99,8 @@ Class User {
         $this->id_droit = $id_droit;
     }
 
-
+    // Requête pour récupérer un utilisateur avec son genre sur la base de son mail
+    // ou de son login accompagné d'une jointure sur l'id_genre.
     public function getSingleUser(){
         $myQuery = 'SELECT
                         *
@@ -121,6 +122,7 @@ Class User {
         return $stmt;
     }
 
+    // Requête pour récupérer un utilisateur sur son id
     public function getSingleUserById(){
         $myQuery = 'SELECT
                         *
@@ -163,7 +165,7 @@ Class User {
         return $stmt->execute();
     }
 
-    // Update du login de l'utilisateur
+    // Update du login/mot de passe de l'utilisateur 
     public function updateUser(){
         $myQuery = 'UPDATE
                         '.$this->table.'

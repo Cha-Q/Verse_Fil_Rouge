@@ -1,10 +1,9 @@
 <?php
 
-include_once('../controler/create_user.php');
+// Ici on récupère le modèle de l'utilisateur contenant la clase User et notre fichier utils.php
+// qui contient notre fonction de traitement des informations entrées par l'utilisateur
 include_once('../modele/utilisateurs.php');
-
-
-
+include('../utils/utils.php');
 
 $msg = ' ';
 
@@ -25,6 +24,8 @@ $msg = ' ';
         $result = $req->fetch();
         
         
+        // Ici nous allons essayer de vérifier une condition sur notre fetch des informations
+        // entrée par l'utilisateur
         if($result == true){
             
             if(password_verify($mdp, $result['mdp_utilisateur']) == true){

@@ -29,13 +29,13 @@
 
             <div class="col-lg-6 col-sm-12 lead side1">
                 <div>
-                    <h1 class="text-center">Verse is coming </br> for you !</h1>
+                    <h1 class="text-center">Verse is coming </br> after you !</h1>
                     <p>
                         Welcome to <strong>Verse</strong>
                         <br> rejoingez nous sans plus attendre dans cette expérience,
                         <br> partagez et divertissez-vous avec vos amis.
-
                     </p>
+
                     <iframe width="80%" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" nofollow allowfullscreen></iframe>
                 </div>
             </div>

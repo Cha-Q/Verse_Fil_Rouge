@@ -54,24 +54,19 @@ include('../controler/deconnexion.php');
         <hr />
         
     </div>
+
+    <!-- Bouton d'activation de la fenêtre modale -->
     <div class="row g-0">
         <button class=" col-2 modal-btn modal-trigger" id="buttonModal"> Modifier vos informations</button>
     </div>
-        
 
-    
-        
-        
-
-        <!-- ici à            -->
-        <!-- la modale !  la modale -->
-
+        <!-- la modale ! -->
         <div class="modal-container">   
             <div class="overlay modal-trigger"></div>
                 <div class="modale">
                     <button class="close-modal modal-trigger">X</button>
                     <form action="" method="post">
-                        <h2>Modifiez votre pseudo</h2>
+                        <h2> Modifier votre pseudo </h2>
                         <?= $msg?>
                         <div class="form-group form-check ">
                     
@@ -82,11 +77,11 @@ include('../controler/deconnexion.php');
                             <label class="form-input-label" for="mdp-newlogin">Mot de passe : </label>
                             <input class="form-control" type="password" name="mdp-newlogin" maxlength="15" />
                         
-                            <button class="btn btn-primary offset-lg-10 offset-sm-7 col-2 i" type="submit" name="Newlogin">Confirmer</button>
+                            <button class="btn btn-primary offset-lg-9 offset-sm-7 col-2 i" type="submit" name="Newlogin">Confirmer</button>
                         </div>
                     
                     </form>
-                    <h2>Modifiez votre mot de passe </h2>
+                    <h2> Modifier votre mot de passe </h2>
                     <form action="" method="post">
                         <?= $msg1?>
                         <div class="form-group form-check ">
@@ -95,7 +90,7 @@ include('../controler/deconnexion.php');
                         
                             <label class="form-input-label" for="mdp-newmdp">Mot de passe actuel : </label>
                             <input class="form-control" type="password" name="mdp-newmdp"  maxlength="15" />
-                        <button class="btn btn-primary offset-lg-10 offset-sm-7 col-2 i" type="submit" name="Newmdp">Confirmer</button>
+                        <button class="btn btn-primary offset-lg-9 offset-sm-7 col-2 i" type="submit" name="Newmdp">Confirmer</button>
                     </form>
                 </div>
             </div>

@@ -135,7 +135,7 @@ nav {
     font-size: 18px;
     border-radius: 30px;
     padding: 1% 2%;
-    min-width: 110px;
+    min-width: 120px;
     background-color: aliceblue;
     color: rgb(119, 68, 196);
     font-weight: bold;
@@ -167,7 +167,7 @@ nav {
 
 #buttonModal {
     min-width: 200px;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     border-radius: 20px;
     background-color: blueviolet;
     padding: 5px 15px;
@@ -459,6 +459,7 @@ h2 {
     width: 100%;
     height: 100%;
     background: #33333398;
+    backdrop-filter: blur(15px);
 }
 
 .modale {
@@ -470,7 +471,7 @@ h2 {
     background: #fff !important;
     border-radius: 5px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

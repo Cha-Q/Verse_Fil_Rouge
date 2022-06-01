@@ -8,6 +8,10 @@ $msg2 = '';
 $gender = '';
 
 // modification du login de l'utilisateur
+
+
+// Tout d'abord, on va instancier un nouvel utilisateur afin de pouvoir récupérer les informations
+// de l'utilisateur actuel.
 $user = new User();
 
 if (isset($_SESSION['login'])) {
@@ -46,6 +50,13 @@ if (isset($_SESSION['login'])) {
         $newlogin = valid_donnees($_POST['newlogin']);
         $mdp = valid_donnees($_POST['mdp-newlogin']);
         
+        $user->setLogin_user($newlogin);
+        $checkNewLogin = $user->verifyLogin();
+        $nbrUser = $checkNewLogin->rowCount();
+
+        if($nbrUser >0){
+            $msg = 'Aie ce pseudo est déjà utilisé, veuillez en choisir un autre';
+        } else{
 
             if (!password_verify($mdp, $aaa['mdp_utilisateur'])) {
                 
@@ -68,38 +79,39 @@ if (isset($_SESSION['login'])) {
                 
                 
             }
+        }
     }
     // modification du mot de passe
     if (isset($_POST['newmdp']) && !empty($_POST['newmdp']) && isset($_POST['mdp-newmdp']) && !empty($_POST['mdp-newmdp'])){
 
         $newMdp = valid_donnees($_POST['newmdp']);
         $prevMdp= valid_donnees($_POST['mdp-newmdp']);
-    
-        if (!password_verify($prevMdp, $aaa['mdp_utilisateur'])) {
         
-            $msg1 = '<p> Mauvais mot de passe, try again !</p>';
-        } else {
-            if ($aaa == true) {
-
-                $newMdp = password_hash($newMdp, PASSWORD_BCRYPT);
-
-                $user->setId_user(intval($aaa['id_utilisateur'],10));
-                $_SESSION['login'] = $aaa['login_utilisateur'];
-                $user->setMdp_user($newMdp);
-                
-                $user->updateUser();
-                
-                echo '<script language="javascript">';
-                echo 'alert("c est bon.");';
-                echo '</script>';
-                header ('location: monespace.php');
+            if (!password_verify($prevMdp, $aaa['mdp_utilisateur'])) {
             
-            }else{
-                echo '<script language="javascript">';
-                echo 'alert("c est pas bon.");';
-                echo '</script>';
+                $msg1 = '<p> Mauvais mot de passe, try again !</p>';
+            } else {
+                if ($aaa == true) {
+
+                    $newMdp = password_hash($newMdp, PASSWORD_BCRYPT);
+
+                    $user->setId_user(intval($aaa['id_utilisateur'],10));
+                    $_SESSION['login'] = $aaa['login_utilisateur'];
+                    $user->setMdp_user($newMdp);
+                    
+                    $user->updateUser();
+                    
+                    echo '<script type="text/javascript">';
+                    echo 'alert("c est bon.");';
+                    echo '</script>';
+                    header ('location: monespace.php');
+                
+                }else{
+                    echo '<script type="text/javascript">';
+                    echo 'alert("c est pas bon.");';
+                    echo '</script>';
+                }
             }
-        }
     }
 
     if(isset($_POST['mdpSuppr']) && isset($_POST['mpdConf'])){
@@ -122,7 +134,7 @@ if (isset($_SESSION['login'])) {
                     $user->setId_user($idDelete);
                     $user->deleteUser();
 
-                    echo '<script language="javascript">';
+                    echo '<script type="text/javascript">';
                     echo 'alert("Votre compte a bien été supprimé !!!!!!!!!!!!
                     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");';
                     echo '</script>';
@@ -132,7 +144,7 @@ if (isset($_SESSION['login'])) {
                     header('Location: ../index.php');
                     exit();
                 }else{
-                    echo '<script language="javascript">';
+                    echo '<script type="text/javascript">';
                     echo 'alert("Il y a encore une merde le aaa est false");';
                     echo '</script>';
                 }
