@@ -3,7 +3,10 @@
 include('../connect/connect.php');
 
 
+
+
 // La classe utilisateur et son constructeur
+
 Class User {
 
 
@@ -136,6 +139,8 @@ Class User {
         $stmt->execute();
         return $stmt;
     }
+
+    
     // Requête de création d'utilisateur
     public function createUser(){
         $myQuery = 'INSERT INTO

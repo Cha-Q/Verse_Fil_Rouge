@@ -25,7 +25,7 @@ $msg = ' ';
         
         
         // Ici nous allons essayer de vérifier une condition sur notre fetch des informations
-        // entrée par l'utilisateur
+        // entrées par l'utilisateur
         if($result == true){
             
             if(password_verify($mdp, $result['mdp_utilisateur']) == true){

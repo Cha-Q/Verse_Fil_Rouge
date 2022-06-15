@@ -1,6 +1,8 @@
 <?php
 
-    Class Bdd{
+
+
+Class Bdd{
         private $host = 'localhost';
         private $dbname = 'verse';
         private $userName = 'root';

@@ -6,7 +6,9 @@
     $msg = '';
     $msg1 = '';
     $error= '';
-    // récupération des informations entrée par l'utilisateur
+
+
+    // Vérification de la présence des différents champs dans ma superglobale
     if (isset($_POST['radioS']) && !empty($_POST['radioS'])
         && isset($_POST['prenom']) && !empty($_POST['prenom'])
         && isset($_POST['nom']) && !empty($_POST['nom'])
@@ -27,7 +29,7 @@
             $login = valid_donnees($_POST['login']);
             
 
-            // Une fois les informations entrée on engage nos tests avant de préparer l'insertion
+            // Une fois les informations entrées on engage nos tests avant de préparer l'insertion
                 // Vérification de correspondance des champs entre eux
             if($mdp_user == $mdp2){
 
@@ -45,7 +47,7 @@
                     && filter_var($mail_user, FILTER_VALIDATE_EMAIL)
                 ) {
                 
-                    // Maintenant on instancie notre utilisateur avec les setteurs de notre modele
+                    // Maintenant on instancie notre utilisateur avec les setteurs de notre modèle
                     $user = new User();
 
                     $user->setName_user($name_user);
